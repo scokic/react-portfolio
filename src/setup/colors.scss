@@ -1,5 +1,12 @@
 :root {
   --white: #ffffff;
-  --accent: blue;
-  --accent-hover: darkblue;
+  --black: #000000;
+  --blue: hsl(220, 100%, 60%);
+  --blue-light: hsl(218, 73%, 93%);
+  // --blue-light: hsl(220, 75%, 95%);
+  --blue-dark: hsl(220, 100%, 50%);
+  --background-light: #fcfbfe;
+  --light-grey: #f2f3f7;
+  --border-grey: lightgrey;
+  --box-shadow: 0px 0px 1px var(--border-grey);
 }

@@ -1,0 +1,81 @@
+@import "../../setup/colors.scss";
+
+.dev-tool-card {
+  padding: 0.25rem;
+  margin: 0.25rem;
+  text-align: center;
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
+  z-index: 10;
+
+  &:hover {
+    background-color: var(--white);
+
+    .dev-tool-icon {
+      &::before {
+        opacity: 0.5;
+        display: block;
+        transition-duration: 0.25s;
+        transform: skew(-40deg) translateX(125px);
+      }
+
+      &::after {
+        opacity: 0.5;
+        display: block;
+        transition-delay: 0.15s;
+        transition-duration: 0.25s;
+        transform: skew(-40deg) translateX(125px);
+      }
+    }
+  }
+
+  .dev-tool-icon {
+    height: 7.5rem;
+    width: 7.5rem;
+    border-radius: 4px;
+    display: grid;
+    place-items: center;
+    position: relative;
+    overflow: hidden;
+
+    &::before,
+    &::after {
+      content: "";
+      height: 100%;
+      width: 40px;
+      background-color: var(--white);
+      top: 0;
+      left: 0;
+      position: absolute;
+      transform: skew(-40deg) translateX(-50px);
+      opacity: 0;
+    }
+
+    &::after {
+      width: 20px !important;
+    }
+
+    img {
+      max-height: 5rem;
+      max-width: 5rem;
+    }
+  }
+}
+
+.active-card {
+  background-color: var(--white);
+
+  &::before {
+    content: "";
+    height: 0;
+    width: 0;
+    border-bottom: 2rem solid white;
+    border-left: 2rem solid transparent;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(50%) rotate(45deg);
+    background-color: var(--white);
+  }
+}

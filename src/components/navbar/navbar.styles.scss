@@ -1,18 +1,30 @@
+@import "../../setup/colors.scss";
+
 .navbar-wrapper {
+  background-color: var(--white);
+  padding: 1rem !important;
+  z-index: 999;
+
   .navbar-container {
-    max-width: 1200px;
-    margin: auto;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    height: 4rem;
 
     .navbar-logo {
       margin-right: auto;
-      color: var(--accent);
-      font-size: 2rem;
-      font-weight: 600;
-      margin-left: 1rem;
+      position: relative;
+
+      a {
+        font-weight: 500;
+        font-size: 1.75rem;
+        padding-bottom: 0.2rem;
+        border-bottom: solid 2.5px transparent;
+
+        &:hover {
+          cursor: pointer;
+          border-color: var(--black);
+        }
+      }
     }
 
     nav {
@@ -21,31 +33,27 @@
 
       li {
         a {
-          font-size: 1rem;
-          padding: 0.5rem 1.5rem;
-          border-radius: 3px;
+          margin-left: 1.5rem;
+          padding-bottom: 0.2rem;
+          border-bottom: solid 2px transparent;
 
           &:hover {
-            background-color: lightgrey;
             cursor: pointer;
+            border-color: var(--black);
           }
         }
       }
     }
 
-    .navbar-button {
-      margin: auto 1rem;
-      outline: none;
-      border: none;
-      background-color: var(--accent);
-      padding: 0.5rem 1rem;
-      border-radius: 3px;
-      color: var(--white);
-      cursor: pointer;
-
-      &:hover {
-        background-color: var(--accent-hover);
-      }
+    .button-container {
+      margin-left: 1rem;
     }
   }
+}
+
+.navbar-scrolled {
+  position: sticky;
+  top: 0;
+  border-color: var(--light-grey);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.03);
 }

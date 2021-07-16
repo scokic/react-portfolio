@@ -1,0 +1,8 @@
+@import "../../setup/colors.scss";
+
+.test-section {
+  height: 90vh;
+  background-color: lightblue;
+  display: grid;
+  place-items: center;
+}

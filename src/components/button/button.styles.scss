@@ -1,0 +1,17 @@
+@import "../../setup/colors.scss";
+
+.custom-button {
+  outline: none;
+  border: none;
+  background-color: var(--blue);
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  color: var(--white);
+  cursor: pointer;
+  transition: 0.1s;
+
+  &:hover {
+    background-color: var(--blue-dark);
+    box-shadow: 0px 0px 5px #00000050;
+  }
+}
