@@ -3,7 +3,6 @@ import "./dev-tool-card.styles.scss";
 
 const DevToolCard = ({ name, image, idx, setActiveTool, activeCard }) => {
   const changeActiveTool = () => {
-    console.log(idx);
     setActiveTool(idx);
   };
 

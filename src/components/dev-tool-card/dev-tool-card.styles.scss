@@ -79,3 +79,26 @@
     background-color: var(--white);
   }
 }
+
+@media screen and (max-width: 600px) {
+  .dev-tool-card {
+    margin-bottom: 0.5rem;
+
+    .dev-tool-icon {
+      height: 14vw;
+      width: 14vw;
+
+      img {
+        max-height: 12vw;
+        max-width: 12vw;
+      }
+    }
+  }
+
+  .active-card {
+    &::before {
+      border-bottom: 1.5rem solid white;
+      border-left: 1.5rem solid transparent;
+    }
+  }
+}

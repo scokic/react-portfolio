@@ -1,11 +1,11 @@
 import React from "react";
 import "./button.styles.scss";
 
-const Button = ({ text, link }) => {
+const Button = ({ text, url, transparent, blank }) => {
   return (
-    <button className='custom-button' href={link}>
+    <a className={`custom-button ${transparent ? "transparent-button" : ""}`} href={url} target={blank ? "_blank" : ""}>
       {text}
-    </button>
+    </a>
   );
 };
 

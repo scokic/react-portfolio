@@ -1,0 +1,28 @@
+@import "../../setup/colors.scss";
+
+.footer-wrapper {
+  background-color: var(--light-grey);
+
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+
+    .navbar-logo {
+      position: relative;
+
+      a {
+        font-weight: 500;
+        font-size: 1.75rem;
+        padding-bottom: 0.2rem;
+        border-bottom: solid 2.5px transparent;
+        text-decoration: none;
+        color: var(--black);
+
+        &:hover {
+          cursor: pointer;
+          border-color: var(--black);
+        }
+      }
+    }
+  }
+}

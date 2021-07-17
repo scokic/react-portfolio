@@ -4,14 +4,16 @@
   background-color: var(--white);
   padding: 1rem !important;
   z-index: 999;
+  position: sticky;
+  top: 0;
+  border-color: var(--light-grey);
 
   .navbar-container {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
 
     .navbar-logo {
-      margin-right: auto;
       position: relative;
 
       a {
@@ -19,6 +21,8 @@
         font-size: 1.75rem;
         padding-bottom: 0.2rem;
         border-bottom: solid 2.5px transparent;
+        text-decoration: none;
+        color: var(--black);
 
         &:hover {
           cursor: pointer;
@@ -48,12 +52,77 @@
     .button-container {
       margin-left: 1rem;
     }
+
+    .hamburger-wrapper {
+      display: none;
+    }
   }
 }
 
 .navbar-scrolled {
-  position: sticky;
-  top: 0;
-  border-color: var(--light-grey);
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.03);
+}
+
+@media screen and (max-width: 600px) {
+  .navbar-wrapper {
+    .navbar-container {
+      nav {
+        position: fixed;
+        flex-direction: column;
+        height: calc(100vh - 4rem);
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        background-color: var(--white);
+
+        li {
+          a {
+            margin: 0 0.5rem;
+            padding: 1rem;
+            display: block;
+            border: none;
+          }
+        }
+      }
+
+      nav,
+      .button-container {
+        transform: translateX(100vw);
+        transition: 0.25s ease-out;
+      }
+
+      .button-container {
+        position: fixed;
+        bottom: 1rem;
+        left: 1rem;
+        margin: 0;
+
+        button {
+          width: calc(100vw - 2rem);
+        }
+      }
+
+      .hamburger-wrapper {
+        display: grid;
+        place-items: center;
+        cursor: pointer;
+
+        .hamburger-icon {
+          font-size: 2rem;
+        }
+      }
+    }
+
+    .nav-open {
+      z-index: 900;
+      box-sizing: border-box;
+
+      nav,
+      .button-container {
+        display: block;
+        z-index: 901;
+        transform: translateX(0);
+      }
+    }
+  }
 }

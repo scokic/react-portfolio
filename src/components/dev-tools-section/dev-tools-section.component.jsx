@@ -80,13 +80,15 @@ const DevToolsSection = () => {
 
   const [activeTool, setActiveTool] = useState(3);
 
+  // create automated loop through the lis which pauses on section hover
+
   const devToolsList = devTools.map((tool) => <DevToolCard key={tool.id} idx={tool.id} name={tool.name} image={tool.image} link={tool.link} setActiveTool={setActiveTool} activeCard={activeTool} />);
 
   return (
     <div className='dev-tools-wrapper section-wrapper'>
       <div className='dev-tools-container section-container'>
-        <h2>My favourite tools</h2>
-        <p>These are the tools I love to use. Hover over tools check out what I admire and love using from each and every one of them!</p>
+        <h2 className='section-heading'>My favourite tools</h2>
+        <p className='section-description'>These are the tools I love to use. Hover over tools check out what I admire and love using from each and every one of them!</p>
         <div className='dev-tools-grid '>{devToolsList}</div>
 
         <div className='single-tool-description-wrapper'>
