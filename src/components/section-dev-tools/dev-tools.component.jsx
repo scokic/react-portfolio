@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import DevToolCard from "../dev-tool-card/dev-tool-card.component";
-import "./dev-tools-section.styles.scss";
+import "./dev-tools.styles.scss";
 
 const DevToolsSection = () => {
   const devTools = [

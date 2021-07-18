@@ -2,10 +2,12 @@
 
 .footer-wrapper {
   background-color: var(--light-grey);
+  padding: 3rem 0;
 
   .footer-container {
     display: flex;
     justify-content: space-between;
+    padding: 1rem 0;
 
     .navbar-logo {
       position: relative;
@@ -24,5 +26,9 @@
         }
       }
     }
+  }
+
+  .subfooter {
+    text-align: center;
   }
 }

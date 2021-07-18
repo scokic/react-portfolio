@@ -6,10 +6,10 @@ const ProjectCard = (props) => {
   const [projectFramework, setProjectFramework] = useState("");
 
   let frameworkImageLinks = [
-    { name: "react", url: "/images/tools/react-logo.svg" },
-    { name: "javascript", url: "/images/tools/javascript-logo.svg" },
-    { name: "svelte", url: "/images/tools/svelte-logo.svg" },
-    { name: "vue", url: "/images/tools/vue-logo.svg" },
+    { name: "React", url: "/images/tools/react-logo.svg" },
+    { name: "JavaScript", url: "/images/tools/javascript-logo.svg" },
+    { name: "Svelte", url: "/images/tools/svelte-logo.svg" },
+    { name: "Vue", url: "/images/tools/vue-logo.svg" },
   ];
 
   let findFramework = () => {
@@ -27,7 +27,10 @@ const ProjectCard = (props) => {
       </a>
       <div className='card-description'>
         <div className='project-name-section'>
-          <img className='language-icon' src={projectFramework} />
+          <div className='framework-grid'>
+            <img className='framework-icon' src={projectFramework} />
+            <span>{props.framework}</span>
+          </div>
           <span className='project-name'>{props.name}</span>
         </div>
         <div className='project-description'>
