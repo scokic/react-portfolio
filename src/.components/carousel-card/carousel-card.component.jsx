@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Button from "../button/button.component";
-import "./project-card.styles.scss";
+import "./carousel-card.styles.scss";
 
-const ProjectCard = (props) => {
-  const [projectFramework, setProjectFramework] = useState("");
+const CarouselCard = (props) => {
+  const [carouselFramework, setCarouselFramework] = useState("");
 
   let frameworkImageLinks = [
     { name: "React", url: "/images/tools/react-logo.svg" },
@@ -13,7 +13,7 @@ const ProjectCard = (props) => {
   ];
 
   let findFramework = () => {
-    frameworkImageLinks.forEach((framework) => (props.framework === framework.name ? setProjectFramework(framework.url) : ""));
+    frameworkImageLinks.forEach((framework) => (props.framework === framework.name ? setCarouselFramework(framework.url) : ""));
   };
 
   useEffect(() => {
@@ -21,22 +21,22 @@ const ProjectCard = (props) => {
   }, []);
 
   return (
-    <div className='project-card-wrapper'>
-      <a className='project-screenshot' href={props.demoLink} target='_blank'>
+    <div className='carousel-card-wrapper'>
+      <a className='carousel-screenshot' href={props.demoLink} target='_blank'>
         <img src={props.image} />
       </a>
       <div className='card-description'>
-        <div className='project-name-section'>
+        <div className='carousel-name-section'>
           <div className='framework-grid'>
-            <img className='framework-icon' src={projectFramework} />
+            <img className='framework-icon' src={carouselFramework} />
             <span>{props.framework}</span>
           </div>
-          <span className='project-name'>{props.name}</span>
+          <span className='carousel-name'>{props.name}</span>
         </div>
-        <div className='project-description'>
+        <div className='carousel-description'>
           <p>{props.description}</p>
         </div>
-        <div className='project-links'>
+        <div className='carousel-links'>
           <Button blank text='Demo' url={props.demoLink} />
           <Button transparent blank text='GitHub' url={props.githubLink} />
         </div>
@@ -45,4 +45,4 @@ const ProjectCard = (props) => {
   );
 };
 
-export default ProjectCard;
+export default CarouselCard;

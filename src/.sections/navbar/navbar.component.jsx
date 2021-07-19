@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
-import Button from "../button/button.component";
+import { Link } from "react-router-dom";
+
+import Button from "../../.components/button/button.component";
 import "./navbar.styles.scss";
 import { FiMenu } from "react-icons/fi";
 
@@ -30,27 +32,22 @@ function Navbar() {
     <div className={`section-wrapper navbar-wrapper ${scrolled ? "navbar-scrolled" : ""}`}>
       <div className={`navbar-container section-container ${!navOpen ? "" : "nav-open"}`}>
         <span className='navbar-logo'>
-          <a href='#'>Strahinja</a>
+          <Link to='/'>Strahinja</Link>
         </span>
         <nav>
           <li>
-            <a>About Me</a>
+            <Link className='nav-link' to='/'>
+              Home
+            </Link>
           </li>
           <li>
-            <a>Tools</a>
-          </li>
-          <li>
-            <a>Projects</a>
-          </li>
-          <li>
-            <a>Experience</a>
-          </li>
-          <li>
-            <a>Blog</a>
+            <Link className='nav-link' to='/portfolio'>
+              Portfolio
+            </Link>
           </li>
         </nav>
         <div className='button-container'>
-          <Button text='Contact' url={"#"} />
+          <Button text='Contact me' blank url='https://www.linkedin.com/in/strahinjacokic/' />
         </div>
         <div className='hamburger-wrapper' onClick={toggleMobileNavOpen}>
           <FiMenu className='hamburger-icon' />

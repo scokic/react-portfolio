@@ -1,8 +1,8 @@
 import React from "react";
-import "./projects.styles.scss";
 import ProjectCard from "../project-card/project-card.component";
+import "./projects-grid.styles.scss";
 
-const ProjectsSection = () => {
+const ProjectsGrid = () => {
   const projects = [
     {
       name: "Simple Todo App",
@@ -29,6 +29,14 @@ const ProjectsSection = () => {
       image: "/images/project-screenshots/Marvel Heroes Cards.png",
     },
     {
+      name: "Darts Score Counter",
+      framework: "Svelte",
+      demoLink: "https://darts-counter.netlify.app/",
+      githubLink: "https://github.com/scokic/svelte-darts-score-counter",
+      description: "I love playing darts for fun, so I decided to make a counter for two players playing a game of 501 with Svelte. Give it a go!",
+      image: "/images/project-screenshots/Darts Score Counter.png",
+    },
+    {
       name: "Kanban Board",
       framework: "JavaScript",
       demoLink: "https://strahinjacokic.com/components/Kanban-Board/index.html",
@@ -44,17 +52,32 @@ const ProjectsSection = () => {
       description: "During JavaScript course I made two player game of dices. Winner is the one who reaches 100 points first. Give it a try!",
       image: "/images/project-screenshots/Two Player Dice Game.png",
     },
+    {
+      name: "Medana",
+      framework: "Wordpress",
+      demoLink: "https://www.medana.rs",
+      description: "During JavaScript course I made two player game of dices. Winner is the one who reaches 100 points first. Give it a try!",
+      image: "/images/project-screenshots/Medana Screenshot.png",
+    },
+    {
+      name: "Pobedimo Astmu",
+      framework: "Wordpress",
+      demoLink: "https://www.pobedimoastmu.rs",
+      description: "During JavaScript course I made two player game of dices. Winner is the one who reaches 100 points first. Give it a try!",
+      image: "/images/project-screenshots/Pobedimo Astmu Screenshot.png",
+    },
+    {
+      name: "Digitalna Kancelarija",
+      framework: "Wordpress",
+      demoLink: "https://www.digitalnakancelarija.rs",
+      description: "During JavaScript course I made two player game of dices. Winner is the one who reaches 100 points first. Give it a try!",
+      image: "/images/project-screenshots/Digitalna Kancelarija Screenshot.png",
+    },
   ];
 
   const projectList = projects.map((project) => <ProjectCard key={project.name} {...project} />);
 
-  return (
-    <div className='section-wrapper projects-section-wrapper'>
-      <h2 className='section-heading'>My favourite projects</h2>
-      <p className='section-description'>I love building interfaces and complex full fledged web apps. Take a look at some of my favourite projects. If you're curious you can also check out all of my projects at Projects page.</p>
-      <div className='projects-section-container section-container'>{projectList}</div>
-    </div>
-  );
+  return <div className='projects-section-container section-container'>{projectList}</div>;
 };
 
-export default ProjectsSection;
+export default ProjectsGrid;

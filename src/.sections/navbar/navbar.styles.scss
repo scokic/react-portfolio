@@ -17,7 +17,7 @@
       position: relative;
 
       a {
-        font-weight: 500;
+        font-weight: bold;
         font-size: 1.75rem;
         padding-bottom: 0.2rem;
         border-bottom: solid 2.5px transparent;
@@ -36,10 +36,12 @@
       list-style: none;
 
       li {
-        a {
+        .nav-link {
           margin-left: 1.5rem;
           padding-bottom: 0.2rem;
           border-bottom: solid 2px transparent;
+          color: var(--black);
+          text-decoration: none;
 
           &:hover {
             cursor: pointer;

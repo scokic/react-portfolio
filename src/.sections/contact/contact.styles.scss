@@ -1,0 +1,25 @@
+@import "../../setup/colors.scss";
+
+.contact-wrapper {
+  .contact-container {
+    background-color: var(--blue);
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .contact-description,
+    .contact-button {
+      padding: 3rem;
+    }
+
+    .contact-description {
+      color: white;
+
+      h3 {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}

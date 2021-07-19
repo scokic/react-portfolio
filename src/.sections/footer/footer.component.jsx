@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../button/button.component";
+import Button from "../../.components/button/button.component";
 import "./footer.styles.scss";
 
 const Footer = () => {
