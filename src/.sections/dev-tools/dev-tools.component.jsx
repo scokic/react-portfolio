@@ -40,9 +40,7 @@ const DevToolsSection = () => {
       name: "Svelte",
       image: "/images/tools/svelte-logo.svg",
       link: "TSurl",
-      description: `Probably the most interesting ${(
-        <span className='crossed-text'>"framework"</span>
-      )} JavaScript compiler out there. I love the simplicity and speed it brings to the JavaScript ecosystem, as well as unique approach. Probably the tech I'll spend most of my time with while building my personal projects in the future.`,
+      description: `Probably the most interesting JavaScript "framework" there is. I love the simplicity and speed this compiler brings to the JavaScript ecosystem, as well as its unique approach. Probably the tech I'll spend most of my time with (along with React) while building my personal projects in the future.`,
     },
     {
       id: 5,
@@ -66,7 +64,7 @@ const DevToolsSection = () => {
       image: "/images/tools/visual-studio-code-logo.svg",
       link: "TSurl",
       description:
-        "I use VS Code daily. I even stopped bothering to close the app. There is not much to say that people don't already know: extensions, themes, never found a bug. Simply great tool I have no intention of replacing in the near future.",
+        "I use VS Code daily. I use it so much even stopped bothering closing it at the end of the day. There is not much to say that people don't already know: efficient, easy to use, syntax highlighting, and I never found a bug. Simply great tool I have no intention of replacing in the near future.",
     },
     {
       id: 8,

@@ -23,3 +23,18 @@
     }
   }
 }
+
+@media screen and (max-width: 600px) {
+  .contact-wrapper {
+    .contact-container {
+      flex-direction: column;
+
+      .contact-description,
+      .contact-button {
+        padding: 2rem;
+
+        text-align: center;
+      }
+    }
+  }
+}

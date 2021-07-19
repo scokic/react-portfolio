@@ -56,4 +56,10 @@
   .custom-button {
     padding: 1rem 2rem;
   }
+
+  .fullwidth {
+    display: block;
+    max-width: calc(100vw - 2rem);
+    text-align: center;
+  }
 }

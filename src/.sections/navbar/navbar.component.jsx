@@ -47,7 +47,7 @@ function Navbar() {
           </li>
         </nav>
         <div className='button-container'>
-          <Button text='Contact me' blank url='https://www.linkedin.com/in/strahinjacokic/' />
+          <Button blank fullwidth text='Contact me' url='https://www.linkedin.com/in/strahinjacokic/' />
         </div>
         <div className='hamburger-wrapper' onClick={toggleMobileNavOpen}>
           <FiMenu className='hamburger-icon' />

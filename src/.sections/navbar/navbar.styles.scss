@@ -78,11 +78,11 @@
         background-color: var(--white);
 
         li {
-          a {
-            margin: 0 0.5rem;
-            padding: 1rem;
+          .nav-link {
+            margin: 0;
+            width: 100%;
+            padding: 0.5rem 1rem;
             display: block;
-            border: none;
           }
         }
       }
@@ -98,10 +98,7 @@
         bottom: 1rem;
         left: 1rem;
         margin: 0;
-
-        button {
-          width: calc(100vw - 2rem);
-        }
+        width: 100%;
       }
 
       .hamburger-wrapper {
