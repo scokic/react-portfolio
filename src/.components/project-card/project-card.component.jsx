@@ -42,18 +42,31 @@ const ProjectCard = (props) => {
           // render buttons on card
           // render "website" button if it is wordpress website
           // render "demo" and "github" if it is not wordpress website
-        }
 
-        {props.framework === "Wordpress" ? (
-          <div className='project-links'>
-            <Button blank text='Website' url={props.demoLink} />
-          </div>
-        ) : (
-          <div className='project-links'>
-            <Button blank text='Demo' url={props.demoLink} /> <Button transparent blank text='GitHub' url={props.githubLink} />{" "}
-          </div>
-        )}
+          props.framework === "Wordpress" ? (
+            <div className='project-links'>
+              <Button blank text='Visit Website' url={props.demoLink} />
+            </div>
+          ) : props.githubLink === "" ? (
+            <div className='project-links'>
+              <Button blank text='Open App' url={props.demoLink} />
+            </div>
+          ) : (
+            <div className='project-links'>
+              <Button blank text='Demo' url={props.demoLink} /> <Button transparent blank text='GitHub' url={props.githubLink} />{" "}
+            </div>
+          )
+        }
       </div>
+
+      {
+        // render in progress ribbon if project is in progress
+        props.progress === "in-progress" ? (
+          <div className='in-progress-ribbon'>
+            <span>IN PROGRESS</span>
+          </div>
+        ) : null
+      }
     </div>
   );
 };

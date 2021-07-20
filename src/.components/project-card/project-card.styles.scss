@@ -4,11 +4,61 @@
   border-radius: 8px;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  // overflow: hidden;
   transition: 0.2s ease-out;
   box-shadow: 0 0 3em -0.125em rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.02);
   margin: 1rem;
   max-width: 350px;
+  position: relative;
+
+  /* in progress ribbon */
+
+  .in-progress-ribbon {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+  }
+  .in-progress-ribbon::before,
+  .in-progress-ribbon::after {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    display: block;
+    border: 5px solid rgb(196, 1, 1);
+    border-top-color: transparent;
+    border-left-color: transparent;
+    overflow: hidden;
+  }
+
+  .in-progress-ribbon::before {
+    top: 0;
+    right: 0.55rem;
+  }
+
+  .in-progress-ribbon::after {
+    bottom: 0.55rem;
+    left: 0;
+  }
+
+  .in-progress-ribbon span {
+    position: absolute;
+    display: block;
+    width: 225px;
+    padding: 0.5rem 0;
+    background-color: red;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    text-align: center;
+    right: -20px;
+    top: 40px;
+    transform: rotate(-45deg);
+  }
 
   .project-screenshot {
     padding: 0.75rem;
@@ -29,7 +79,7 @@
   .card-description {
     padding: 1.5rem;
     padding-top: 0.5rem;
-    height: 50%;
+    height: 100%;
     display: flex;
     flex-direction: column;
 
@@ -65,6 +115,7 @@
 
     .project-description {
       margin-bottom: 1rem;
+      flex-grow: 1;
     }
 
     .project-links {

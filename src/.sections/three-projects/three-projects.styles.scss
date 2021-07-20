@@ -1,0 +1,13 @@
+@import "../../setup/colors.scss";
+
+.projects-section-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  .custom-button {
+    text-decoration: none;
+    margin: auto;
+    margin-top: 3rem;
+  }
+}

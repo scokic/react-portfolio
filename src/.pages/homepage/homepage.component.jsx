@@ -1,17 +1,17 @@
 import React from "react";
 import "./homepage.styles.scss";
-import HeroSection from "../../.sections/hero/hero.component";
 import DevToolsSection from "../../.sections/dev-tools/dev-tools.component";
-import ProjectsSection from "../../.sections/projects/projects.component";
-import Contact from "../../.sections/contact/contact.component";
+import ThreeProjectsSection from "../../.sections/three-projects/three-projects.component";
+import HomepageHeroSection from "../../.sections/homepage-hero/homepage-hero.component";
+import ContactSection from "../../.sections/contact-section/contact-section.component";
 
 function Homepage() {
   return (
     <div className='homepage-wrapper'>
-      <HeroSection />
+      <HomepageHeroSection />
       <DevToolsSection />
-      <ProjectsSection />
-      <Contact />
+      <ThreeProjectsSection />
+      <ContactSection />
     </div>
   );
 }

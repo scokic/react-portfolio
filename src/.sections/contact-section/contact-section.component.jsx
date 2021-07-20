@@ -1,11 +1,11 @@
 import React from "react";
 import Button from "../../.components/button/button.component";
-import "./contact.styles.scss";
+import "./contact-section.styles.scss";
 
-const Contact = () => {
+const ContactSection = () => {
   return (
-    <div className='contact-wrapper section-wrapper'>
-      <div className='contact-container section-container'>
+    <div className='contact-section-wrapper section-wrapper'>
+      <div className='contact-section-container section-container'>
         <div className='contact-description'>
           <h3>Get in touch</h3>
           <p>If you like what you see and would like to get in touch, I would love to hear from you!</p>
@@ -19,4 +19,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default ContactSection;

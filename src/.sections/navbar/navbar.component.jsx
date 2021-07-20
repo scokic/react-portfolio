@@ -35,19 +35,24 @@ function Navbar() {
           <Link to='/'>Strahinja</Link>
         </span>
         <nav>
-          <li>
+          <li onClick={toggleMobileNavOpen}>
             <Link className='nav-link' to='/'>
               Home
             </Link>
           </li>
-          <li>
+          <li onClick={toggleMobileNavOpen}>
             <Link className='nav-link' to='/portfolio'>
               Portfolio
             </Link>
           </li>
+          <li onClick={toggleMobileNavOpen}>
+            <Link className='nav-link' to='/contact'>
+              Contact
+            </Link>
+          </li>
         </nav>
-        <div className='button-container'>
-          <Button blank fullwidth text='Contact me' url='https://www.linkedin.com/in/strahinjacokic/' />
+        <div className='button-container' onClick={toggleMobileNavOpen}>
+          <Button blank fullwidth text='Contact' url='https://www.linkedin.com/in/strahinjacokic/' />
         </div>
         <div className='hamburger-wrapper' onClick={toggleMobileNavOpen}>
           <FiMenu className='hamburger-icon' />

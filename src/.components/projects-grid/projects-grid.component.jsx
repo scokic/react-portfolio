@@ -5,6 +5,15 @@ import "./projects-grid.styles.scss";
 const ProjectsGrid = () => {
   const projects = [
     {
+      name: "Spending Insider App",
+      framework: "React",
+      demoLink: "https://spending-insider.web.app/",
+      githubLink: "",
+      description: "I'm currently building a personal finance tracker app with React and Firebase.",
+      image: "/images/project-screenshots/Spending Insider.png",
+      progress: "in-progress",
+    },
+    {
       name: "Simple Todo App",
       framework: "React",
       demoLink: "https://scokic.github.io/simpletodoapp/",
@@ -56,22 +65,25 @@ const ProjectsGrid = () => {
       name: "Medana",
       framework: "Wordpress",
       demoLink: "https://www.medana.rs",
+      githubLink: "",
       description: "Ecommerce website built for small honey producer. The website is used daily and generates great recurring monthly for the owner.",
-      image: "/images/project-screenshots/Medana Screenshot.png",
+      image: "/images/project-screenshots/Medana.png",
     },
     {
       name: "Pobedimo Astmu",
       framework: "Wordpress",
       demoLink: "https://www.pobedimoastmu.rs",
+      githubLink: "",
       description: "Presentation website with blog built for local NGO which mission is to spread the knowledge and support for people suffering from atopic deseases.",
-      image: "/images/project-screenshots/Pobedimo Astmu Screenshot.png",
+      image: "/images/project-screenshots/Pobedimo Astmu.png",
     },
     {
       name: "Digitalna Kancelarija",
       framework: "Wordpress",
+      githubLink: "",
       demoLink: "https://www.digitalnakancelarija.rs",
       description: "Presentational website which showcases my WordPress projects in form of a small digital transformation and marketing agency.",
-      image: "/images/project-screenshots/Digitalna Kancelarija Screenshot.png",
+      image: "/images/project-screenshots/Digitalna Kancelarija.png",
     },
   ];
 

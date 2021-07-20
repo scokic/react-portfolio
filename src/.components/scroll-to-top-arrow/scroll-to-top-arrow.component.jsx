@@ -1,10 +1,8 @@
 import React from "react";
-import "./scroll-to-top.styles.scss";
+import "./scroll-to-top-arrow.styles.scss";
 import { FiArrowUp } from "react-icons/fi";
 
-const ScrollToTop = () => {
-  // smooth scroll to top does not work on safari
-
+const ScrollToTopArrow = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -18,4 +16,4 @@ const ScrollToTop = () => {
   );
 };
 
-export default ScrollToTop;
+export default ScrollToTopArrow;

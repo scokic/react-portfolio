@@ -1,7 +1,7 @@
 @import "../../setup/colors.scss";
 
-.contact-wrapper {
-  .contact-container {
+.contact-section-wrapper {
+  .contact-section-container {
     background-color: var(--blue);
     border-radius: 8px;
     box-shadow: var(--box-shadow);
@@ -12,6 +12,10 @@
     .contact-description,
     .contact-button {
       padding: 3rem;
+    }
+
+    .contact-button {
+      min-width: 250px;
     }
 
     .contact-description {
@@ -25,14 +29,13 @@
 }
 
 @media screen and (max-width: 600px) {
-  .contact-wrapper {
-    .contact-container {
+  .contact-section-wrapper {
+    .contact-section-container {
       flex-direction: column;
 
       .contact-description,
       .contact-button {
         padding: 2rem;
-
         text-align: center;
       }
     }

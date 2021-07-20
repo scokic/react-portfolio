@@ -1,13 +1,13 @@
 import React from "react";
 import "./portfolio.styles.scss";
 import ProjectsSection from "../../.sections/projects/projects.component";
-import Contact from "../../.sections/contact/contact.component";
+import ContactSection from "../../.sections/contact-section/contact-section.component";
 
 function Portfolio() {
   return (
     <div className='portfolio-wrapper'>
       <ProjectsSection />
-      <Contact />
+      <ContactSection />
     </div>
   );
 }
