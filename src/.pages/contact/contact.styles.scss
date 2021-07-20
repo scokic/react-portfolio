@@ -120,7 +120,6 @@
 
           label {
             margin: 1rem 0;
-            display: flex;
             justify-content: space-between;
             display: grid;
             grid-template-columns: 1fr 3fr;
@@ -153,8 +152,12 @@
     .contact-container {
       .contact-subsection-wrapper {
         grid-template-columns: 1fr;
+        padding: 0;
+        max-width: 100%;
 
         .contact-info-wrapper {
+          padding: 2rem;
+
           &::before {
             height: 5rem;
             width: 5rem;
@@ -167,6 +170,23 @@
             width: 12.5rem;
             bottom: -5rem;
             right: -5rem;
+          }
+        }
+
+        .contact-form-wrapper {
+          form {
+            label {
+              display: flex;
+              flex-direction: column;
+
+              .input-field {
+                margin-left: 0;
+
+                &::placeholder {
+                  opacity: 0;
+                }
+              }
+            }
           }
         }
       }
