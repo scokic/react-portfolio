@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navbar from "./.sections/navbar/navbar.component";
 import Footer from "./.sections/footer/footer.component";
+import { RecoilRoot } from "recoil";
 
 import "./App.scss";
 import Homepage from "./.pages/homepage/homepage.component";
@@ -16,11 +17,13 @@ function App() {
         <ScrollToTop />
         <Navbar />
         <ScrollToTopArrow />
-        <Switch>
-          <Route component={Portfolio} path='/portfolio' />
-          <Route component={Contact} path='/contact' />
-          <Route component={Homepage} path='/' />
-        </Switch>
+        <RecoilRoot>
+          <Switch>
+            <Route component={Portfolio} path='/portfolio' />
+            <Route component={Contact} path='/contact' />
+            <Route component={Homepage} path='/' />
+          </Switch>
+        </RecoilRoot>
         <Footer />
       </Router>
     </div>

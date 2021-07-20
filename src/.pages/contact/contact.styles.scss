@@ -36,6 +36,26 @@
         position: relative;
         overflow: hidden;
 
+        .email-link {
+          cursor: pointer;
+          position: relative;
+
+          &::before {
+            content: "Copy email to clipboard";
+            font-size: 0.9rem;
+            position: absolute;
+            top: 2rem;
+            left: 0;
+            opacity: 0;
+          }
+
+          &:hover {
+            &::before {
+              opacity: 1;
+            }
+          }
+        }
+
         a {
           display: flex;
           align-items: center;

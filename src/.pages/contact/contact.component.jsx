@@ -11,13 +11,18 @@ const Contact = () => {
         <div className='contact-subsection-wrapper'>
           <div className='contact-info-wrapper'>
             <h3>Contact Information</h3>
-            <a href='#'>
+            <a href='https://www.linkedin.com/in/strahinjacokic/' target='_blank'>
               <FiLinkedin /> <span>LinkedIn</span>
             </a>
-            <a href='#'>
+            <a href='https://github.com/scokic' target='_blank'>
               <FiGithub /> <span>GitHub</span>
             </a>
-            <a href='#'>
+            <a
+              className='email-link'
+              onClick={() => {
+                navigator.clipboard.writeText("strahinjacokic@gmail.com");
+              }}
+              target='_blank'>
               <FiMail /> <span>Email</span>
             </a>
           </div>
