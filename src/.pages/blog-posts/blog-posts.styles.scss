@@ -11,13 +11,17 @@
       flex-direction: column;
       display: block;
       width: 100%;
-      margin-bottom: 3rem;
+      margin-bottom: 5rem;
 
       .blog-posts-title,
       .blog-posts-description {
         max-width: 600px;
         margin: auto;
         text-align: center;
+      }
+
+      .blog-posts-title {
+        margin-bottom: 1.5rem;
       }
     }
   }

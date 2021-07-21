@@ -1,11 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;500;600;900&display=swap");
+
 @import "./setup/colors.scss";
 
 * {
   margin: 0;
   box-sizing: border-box;
-  font-family: "Nunito Sans", sans-serif;
   font-size: 16px;
+  color: var(--black);
+  font-family: "Red Hat Text", sans-serif;
 }
 
 body {
@@ -39,24 +41,25 @@ body {
 // text defaults
 
 h1 {
-  font-size: 4.5rem;
+  font-size: 4.25rem;
 }
 
 h2 {
   font-size: 3.5rem;
   line-height: 4rem;
-  font-weight: 700;
+  font-weight: bold;
 }
 
 h3 {
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: bold;
 }
 
 p {
   font-size: 1.2rem;
-  line-height: 1.3rem;
+  line-height: 1.5rem;
   font-weight: 300;
+  font-family: "Red Hat Text", sans-serif;
 }
 
 @media screen and (max-width: 600px) {

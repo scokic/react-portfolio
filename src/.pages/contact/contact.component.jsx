@@ -12,10 +12,10 @@ const Contact = () => {
           <div className='contact-info-wrapper'>
             <h3>Contact Information</h3>
             <a href='https://www.linkedin.com/in/strahinjacokic/' target='_blank'>
-              <FiLinkedin /> <span>LinkedIn</span>
+              <FiLinkedin className='icon' /> <span>LinkedIn</span>
             </a>
             <a href='https://github.com/scokic' target='_blank'>
-              <FiGithub /> <span>GitHub</span>
+              <FiGithub className='icon' /> <span>GitHub</span>
             </a>
             <a
               className='email-link'
@@ -23,11 +23,11 @@ const Contact = () => {
                 navigator.clipboard.writeText("strahinjacokic@gmail.com");
               }}
               target='_blank'>
-              <FiMail /> <span>Email</span>
+              <FiMail className='icon' /> <span>Email</span>
             </a>
           </div>
           <div className='contact-form-wrapper'>
-            <h3>Write to us!</h3>
+            <h3>Write to me!</h3>
             <form>
               <label>
                 Name

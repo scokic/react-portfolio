@@ -1,12 +1,13 @@
 :root {
   --white: #ffffff;
-  --black: #000000;
+  --black: #2d3747;
   --blue: hsl(220, 100%, 60%);
   --blue-light: hsl(218, 73%, 93%);
   --blue-light: hsl(220, 82%, 89%);
   --blue-dark: hsl(220, 100%, 50%);
   --background-light: #fcfbfe;
-  --light-grey: #f2f3f7;
+  // --light-grey: #f2f3f7;
+  --light-grey: #f4f6f9;
   --border-grey: lightgrey;
   --box-shadow: 0px 0px 1px var(--border-grey);
 }

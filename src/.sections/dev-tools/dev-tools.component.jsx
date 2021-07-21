@@ -86,7 +86,7 @@ const DevToolsSection = () => {
     <div className='dev-tools-wrapper section-wrapper'>
       <div className='dev-tools-container section-container'>
         <h2 className='section-heading'>My tech stack</h2>
-        <p className='section-description'>These are the tools I love to use. Hover over tools check out what I admire and love using from each and every one of them!</p>
+        <p className='section-description'>These are the tools I love using. Hover over tools check out what I admire and love using from each and every one of them!</p>
         <div className='dev-tools-grid '>{devToolsList}</div>
 
         <div className='single-tool-description-wrapper'>

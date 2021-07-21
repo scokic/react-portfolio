@@ -49,7 +49,8 @@ const SingleBlogPost = ({ match }) => {
       <div className='single-post-wrapper section-wrapper'>
         <div className='single-post-container section-container'>
           <h1 className='post-title'>{blogPost.blogPost.title}</h1>
-          <img className='post-image' src={blogPost.blogPost.image.url} />
+
+          <img className='featured-image' src={blogPost.blogPost.image.url} />
 
           {!blogPost.blogPost.content.json ? "" : <div className='post-rich-text'>{documentToReactComponents(blogPost.blogPost.content.json)}</div>}
         </div>
