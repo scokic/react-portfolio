@@ -50,6 +50,11 @@ function Navbar() {
               Contact
             </Link>
           </li>
+          <li onClick={toggleMobileNavOpen}>
+            <Link className='nav-link' to='/blog-posts'>
+              Blog
+            </Link>
+          </li>
         </nav>
         <div className='button-container' onClick={toggleMobileNavOpen}>
           <Button blank fullwidth text='Contact' url='https://www.linkedin.com/in/strahinjacokic/' />

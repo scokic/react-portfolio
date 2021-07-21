@@ -1,0 +1,59 @@
+@import "../../setup/colors.scss";
+
+.card-wrapper {
+  text-decoration: none;
+  color: var(--black);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  transition: 0.2s ease-out;
+  box-shadow: 0 0 3em -0.125em rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.02);
+  margin: 1rem;
+  max-width: 350px;
+  position: relative;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 3em -0.125em rgba(10, 10, 10, 0.25), 0 0 0 1px rgba(10, 10, 10, 0.02);
+  }
+
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    height: 100%;
+
+    .post-image {
+      border-radius: 8px;
+      margin-bottom: auto;
+      width: 100%;
+    }
+
+    .post-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-top: 1rem;
+    }
+    .post-summary {
+      font-size: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    .read-more-button {
+      align-self: flex-end;
+      margin-top: 1rem;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: var(--blue);
+
+      .arrow-icon {
+        margin-left: 0.5rem;
+      }
+
+      &:hover {
+        color: var(--blue-dark);
+      }
+    }
+  }
+}

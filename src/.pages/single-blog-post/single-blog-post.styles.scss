@@ -1,0 +1,15 @@
+@import "../../setup/colors.scss";
+.single-post-wrapper {
+  .single-post-container {
+    .post-title {
+      max-width: 600px;
+      margin: auto;
+      text-align: center;
+      margin-bottom: 5rem;
+    }
+
+    .post-image {
+      max-width: 100%;
+    }
+  }
+}
