@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import Button from "../../.components/button/button.component";
 import "./navbar.styles.scss";
@@ -32,28 +32,28 @@ function Navbar() {
     <div className={`section-wrapper navbar-wrapper ${scrolled ? "navbar-scrolled" : ""}`}>
       <div className={`navbar-container section-container ${!navOpen ? "" : "nav-open"}`}>
         <span className='navbar-logo'>
-          <Link to='/'>Strahinja</Link>
+          <NavLink to='/'>Strahinja</NavLink>
         </span>
         <nav>
           <li onClick={toggleMobileNavOpen}>
-            <Link className='nav-link' to='/'>
+            <NavLink className='nav-link' exact activeClassName='nav-link active' to='/'>
               Home
-            </Link>
+            </NavLink>
           </li>
           <li onClick={toggleMobileNavOpen}>
-            <Link className='nav-link' to='/portfolio'>
+            <NavLink className='nav-link' exact activeClassName='nav-link active' to='/portfolio'>
               Portfolio
-            </Link>
+            </NavLink>
           </li>
           <li onClick={toggleMobileNavOpen}>
-            <Link className='nav-link' to='/contact'>
+            <NavLink className='nav-link' exact activeClassName='nav-link active' to='/contact'>
               Contact
-            </Link>
+            </NavLink>
           </li>
           <li onClick={toggleMobileNavOpen}>
-            <Link className='nav-link' to='/blog-posts'>
+            <NavLink className='nav-link' exact activeClassName='nav-link active' to='/blog-posts'>
               Blog
-            </Link>
+            </NavLink>
           </li>
         </nav>
         <div className='button-container' onClick={toggleMobileNavOpen}>

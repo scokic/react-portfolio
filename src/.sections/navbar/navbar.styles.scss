@@ -4,7 +4,8 @@
   background-color: var(--white);
   padding: 1rem !important;
   z-index: 999;
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
   border-color: var(--light-grey);
 
@@ -47,6 +48,10 @@
             cursor: pointer;
             border-color: var(--black);
           }
+        }
+
+        .active {
+          color: var(--blue-dark);
         }
       }
     }

@@ -1,7 +1,7 @@
 import React from "react";
 import "./blog-post-card.styles.scss";
 import { FiArrowRight } from "react-icons/fi";
-import { Link, Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const BlogPostCard = ({ postData }) => {
   let title = postData.title;

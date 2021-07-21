@@ -1,5 +1,6 @@
 import { useEffect } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Switch, Route, useLocation } from "react-router-dom";
+import { __RouterContext } from "react-router";
 import Navbar from "./.sections/navbar/navbar.component";
 import Footer from "./.sections/footer/footer.component";
 import { useRecoilState } from "recoil";
@@ -13,6 +14,8 @@ import ScrollToTopArrow from "./.components/scroll-to-top-arrow/scroll-to-top-ar
 import ScrollToTop from "./.sections/scroll-to-top/scroll-to-top.component";
 import BlogPosts from "./.pages/blog-posts/blog-posts.component";
 import SingleBlogPost from "./.pages/single-blog-post/single-blog-post.component";
+
+import { useTransition, animated } from "react-spring";
 
 function App() {
   // fetching blog posts from contentful
@@ -38,18 +41,19 @@ function App() {
   }
   `;
 
+  // fetching blog posts from contentful
+
   useEffect(() => {
-    window
-      .fetch(`https://graphql.contentful.com/content/v1/spaces/umewgum9wl89/`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          // Authenticate the request
-          Authorization: "Bearer Q6JNQAdiaeqJKq-lpS-2EDGoU-0yQia_EGri38UqUWw",
-        },
-        // send the GraphQL query
-        body: JSON.stringify({ query }),
-      })
+    fetch(`https://graphql.contentful.com/content/v1/spaces/umewgum9wl89/`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        // Authenticate the request
+        Authorization: "Bearer Q6JNQAdiaeqJKq-lpS-2EDGoU-0yQia_EGri38UqUWw",
+      },
+      // send the GraphQL query
+      body: JSON.stringify({ query }),
+    })
       .then((response) => response.json())
       .then(({ data, errors }) => {
         if (errors) {
@@ -59,26 +63,38 @@ function App() {
         // rerender the entire component with new data
         setBlogPosts(data.blogPostCollection.items);
       });
-  });
+  }, []);
 
   // end of fetching blog posts from contentful
 
+  const location = useLocation();
+  const transitions = useTransition(location, {
+    from: { opacity: 0.75, height: "100%", position: "absolute", width: "100%", transform: "translate3d(0, -1rem, 0)" },
+    enter: { opacity: 1, height: "100%", transform: "translate3d(0, 0%, 0)" },
+    leave: { display: "none" },
+  });
+
   return (
     <div className='App'>
-      <Router>
-        <ScrollToTop />
-        <Navbar />
-        <ScrollToTopArrow />
-        <Switch>
-          <Route component={Homepage} exact path='/' />
-          <Route component={Portfolio} exact path='/portfolio' />
-          <Route component={Contact} exact path='/contact' />
-          <Route component={BlogPosts} exact path='/blog-posts' />
-          <Route component={SingleBlogPost} path='/blog-posts/:id' />
-          <Route path='/' render={() => <div>404</div>} />
-        </Switch>
-        <Footer />
-      </Router>
+      <ScrollToTop />
+      <Navbar />
+      <ScrollToTopArrow />
+
+      <div className='absolute-wrapper'>
+        {transitions((props, item) => (
+          <animated.div style={props}>
+            <Switch location={item}>
+              <Route exact path='/' component={Homepage} className='page-content' />
+              <Route exact path='/portfolio' component={Portfolio} className='page-content' />
+              <Route exact path='/contact' component={Contact} className='page-content' />
+              <Route exact path='/blog-posts' component={BlogPosts} className='page-content' />
+              <Route component={SingleBlogPost} path='/blog-posts/:id' className='page-content' />
+              <Route path='/' render={() => <div>404</div>} className='page-content' />
+            </Switch>
+            <Footer />
+          </animated.div>
+        ))}
+      </div>
     </div>
   );
 }
