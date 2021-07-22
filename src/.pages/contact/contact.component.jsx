@@ -1,26 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
 import "./contact.styles.scss";
 import emailjs from "emailjs-com";
 import { FiLinkedin, FiMail, FiGithub } from "react-icons/fi";
 
 const Contact = () => {
+  const [toastActive, setToastActive] = useState(false);
+
   function sendEmail(e) {
     e.preventDefault();
 
-    emailjs.sendForm("gmail", "template_m3ir59b", e.target, "user_ftr2BKAL9f4jD8hvam3AS").then(
-      (result) => {
-        console.log(result.text);
-      },
-      (error) => {
-        console.log(error.text);
-      }
-    );
+    // emailjs.sendForm("gmail", "template_m3ir59b", e.target, "user_ftr2BKAL9f4jD8hvam3AS").then(
+    //   (result) => {
+    //     console.log(result.text);
+    //   },
+    //   (error) => {
+    //     console.log(error.text);
+    //   }
+    // );
+
+    setToastActive(true);
+    console.log(toastActive);
+    setTimeout(() => {
+      setToastActive(false);
+      console.log(toastActive);
+    }, 3000);
 
     e.target.reset();
   }
 
   return (
     <div className='contact-wrapper section-wrapper'>
+      {!toastActive ? (
+        ""
+      ) : (
+        <div className='form-submit-toast'>
+          <p>Thanks for reaching out! I'll get back to you shortly!</p>
+        </div>
+      )}
       <div className='contact-container section-container'>
         <h2>Want to say hi?</h2>
         <p className='subheading'>I'd love to hear from you!</p>
