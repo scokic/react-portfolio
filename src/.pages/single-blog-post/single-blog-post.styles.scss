@@ -1,32 +1,89 @@
 @import "../../setup/colors.scss";
 .single-post-wrapper {
+  background-color: var(--white);
+
   .single-post-container {
     display: flex;
     flex-direction: column;
 
     .post-title {
-      max-width: 1000px;
+      max-width: 1200px;
       text-align: center;
-      margin: 2.5rem auto 7.5rem auto;
+      margin: 1.5rem auto 6.5rem auto;
     }
 
     .featured-image {
-      width: 1000px;
-      border-radius: 8px;
+      max-width: 100%;
+      border-radius: 32px;
       margin: auto;
       margin-bottom: 3rem;
+      height: auto;
     }
 
     .post-rich-text {
+      max-width: 800px;
+      margin: auto;
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin: 1rem auto;
+      }
+
       p,
       ul,
       li {
-        max-width: 600px;
-        margin: auto;
+        width: 100%;
+        display: block;
+        margin: 0.5rem auto;
+        text-align: justify;
       }
 
       img {
-        max-width: 1000px;
+        max-width: 100%;
+        display: blockl;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .single-post-wrapper {
+    padding-top: 4rem;
+
+    .single-post-container {
+      .post-title {
+        margin: 0 auto 3rem auto;
+        font-size: 2.25rem;
+        line-height: 2.75rem;
+      }
+
+      .featured-image {
+        border-radius: 12px;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin: 1rem auto;
+        max-width: 95%;
+        font-weight: bold;
+      }
+
+      .post-rich-text {
+        p,
+        ul,
+        li,
+        hr {
+          max-width: 95%;
+          margin: auto;
+        }
       }
     }
   }

@@ -1,6 +1,8 @@
 @import "../../setup/colors.scss";
 
 .blog-posts-section-wrapper {
+  background-color: var(--white);
+
   .blog-posts-section-container {
     display: flex;
     flex-wrap: wrap;
@@ -22,6 +24,21 @@
 
       .blog-posts-title {
         margin-bottom: 1.5rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .blog-posts-section-wrapper {
+    .blog-posts-section-container {
+      .blog-posts-text-wrapper {
+        margin-bottom: 2rem;
+
+        .blog-posts-title,
+        .blog-posts-description {
+          max-width: 90%;
+        }
       }
     }
   }

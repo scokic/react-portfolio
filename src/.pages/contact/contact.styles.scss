@@ -1,6 +1,8 @@
 @import "../../setup/colors.scss";
 
 .contact-wrapper {
+  background-color: var(--white);
+
   .contact-container {
     display: flex;
     flex-direction: column;

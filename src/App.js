@@ -69,8 +69,8 @@ function App() {
 
   const location = useLocation();
   const transitions = useTransition(location, {
-    from: { opacity: 0.75, height: "100%", position: "absolute", width: "100%", transform: "translate3d(0, -1rem, 0)" },
-    enter: { opacity: 1, height: "100%", transform: "translate3d(0, 0%, 0)" },
+    from: { display: "none", height: "100%", position: "absolute", width: "100%", transform: "translate(0, -25px)" },
+    enter: { display: "block", height: "100%", transform: "translate(0, 0)" },
     leave: { display: "none" },
   });
 
