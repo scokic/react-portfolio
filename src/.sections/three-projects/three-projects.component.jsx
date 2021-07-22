@@ -13,9 +13,11 @@ const ThreeProjectsSection = () => {
       <h2 className='section-heading'>My favourite projects</h2>
       <p className='section-description'>I love building interfaces and complex full fledged web apps. Take a look at some of my favourite projects. If you're curious you can also check out all of my projects at Projects page.</p>
       <ThreeProjectsGrid />
-      <Link to='/portfolio' className='custom-button'>
-        All Projects ({totalProjects})
-      </Link>
+      <div className='custom-button-wrapper'>
+        <Link to='/portfolio' className='custom-button'>
+          All Projects ({totalProjects})
+        </Link>
+      </div>
     </div>
   );
 };

@@ -11,7 +11,7 @@ const ProjectsGrid = () => {
 
   const projectList = firstThreeProjects.map((project) => <ProjectCard key={project.name} {...project} />);
 
-  return <div className='projects-section-container section-container'>{projectList}</div>;
+  return <div className='three-projects-section-wrapper section-wrapper'>{projectList}</div>;
 };
 
 export default ProjectsGrid;

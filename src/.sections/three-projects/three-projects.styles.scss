@@ -5,9 +5,33 @@
   flex-wrap: wrap;
   flex-direction: column;
 
-  .custom-button {
-    text-decoration: none;
+  .custom-button-wrapper {
     margin: auto;
-    margin-top: 3rem;
+
+    .custom-button {
+      text-decoration: none;
+      margin-top: 3rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .projects-section-wrapper {
+    max-width: 100vw;
+    overflow-x: hidden;
+
+    .section-heading {
+      max-width: 100%;
+    }
+
+    .section-description {
+      max-width: 100%;
+      margin: 0;
+    }
+
+    .custom-button-wrapper {
+      max-width: 100%;
+      text-align: center;
+    }
   }
 }

@@ -187,10 +187,11 @@
       .contact-subsection-wrapper {
         grid-template-columns: 1fr;
         padding: 0;
-        max-width: 100%;
+        width: 90vw;
 
         .contact-info-wrapper {
-          padding: 2rem;
+          margin: 5vw;
+          width: 80vw;
 
           &::before {
             height: 5rem;
@@ -208,6 +209,8 @@
         }
 
         .contact-form-wrapper {
+          padding: 2rem;
+
           form {
             label {
               display: flex;
