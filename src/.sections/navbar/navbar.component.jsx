@@ -57,7 +57,12 @@ function Navbar() {
           </li>
         </nav>
         <div className='button-container' onClick={toggleMobileNavOpen}>
-          <Button blank fullwidth text='Contact' url='https://www.linkedin.com/in/strahinjacokic/' />
+          <NavLink className='nav-link custom-button' exact activeClassName='nav-link active' to='/contact'>
+            Contact
+          </NavLink>
+          {
+            // <Button blank fullwidth text='Contact' url='https://www.linkedin.com/in/strahinjacokic/' />
+          }
         </div>
         <div className='hamburger-wrapper' onClick={toggleMobileNavOpen}>
           <FiMenu className='hamburger-icon' />

@@ -1,8 +1,24 @@
 import React from "react";
 import "./contact.styles.scss";
+import emailjs from "emailjs-com";
 import { FiLinkedin, FiMail, FiGithub } from "react-icons/fi";
 
 const Contact = () => {
+  function sendEmail(e) {
+    e.preventDefault();
+
+    emailjs.sendForm("gmail", "template_m3ir59b", e.target, "user_ftr2BKAL9f4jD8hvam3AS").then(
+      (result) => {
+        console.log(result.text);
+      },
+      (error) => {
+        console.log(error.text);
+      }
+    );
+
+    e.target.reset();
+  }
+
   return (
     <div className='contact-wrapper section-wrapper'>
       <div className='contact-container section-container'>
@@ -28,18 +44,22 @@ const Contact = () => {
           </div>
           <div className='contact-form-wrapper'>
             <h3>Write to me!</h3>
-            <form>
+            <form onSubmit={sendEmail}>
               <label>
                 Name
-                <input className='input-field' placeholder='Name' type='text' />
+                <input className='input-field' placeholder='Name' type='text' name='name' />
               </label>
               <label>
                 Email
-                <input className='input-field' placeholder='Email' type='email' />
+                <input className='input-field' placeholder='Email' type='email' name='email' />
+              </label>
+              <label>
+                Subject
+                <input className='input-field' placeholder='Subject' type='text' name='subject' />
               </label>
               <label>
                 Message
-                <input className='input-field' placeholder='Message' type='textarea' />
+                <textarea className='input-field' placeholder='Message' rows='3' type='textarea' name='message' />
               </label>
               <input className='submit-button custom-button' type='submit' />
             </form>

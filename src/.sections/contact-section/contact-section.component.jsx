@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import Button from "../../.components/button/button.component";
 import "./contact-section.styles.scss";
 
@@ -12,7 +13,9 @@ const ContactSection = () => {
           <p>Feel free to shoot me up a message on LinkedIn!</p>
         </div>
         <div className='contact-button'>
-          <Button text='Contact me' blank white url='https://www.linkedin.com/in/strahinjacokic/' />
+          <NavLink className='nav-link custom-button' exact activeClassName='nav-link active' to='/contact'>
+            Contact
+          </NavLink>
         </div>
       </div>
     </div>

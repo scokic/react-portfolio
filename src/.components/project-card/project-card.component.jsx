@@ -24,7 +24,7 @@ const ProjectCard = (props) => {
   return (
     <div className='project-card-wrapper'>
       <a className='project-screenshot' href={props.demoLink} target='_blank'>
-        <img src={props.image} />
+        <img src={props.image} alt={props.name} />
       </a>
       <div className='card-description'>
         <div className='project-name-section'>

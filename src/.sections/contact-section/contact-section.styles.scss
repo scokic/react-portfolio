@@ -16,6 +16,15 @@
 
     .contact-button {
       min-width: 250px;
+
+      .custom-button {
+        background-color: var(--white);
+        color: var(--blue);
+
+        &:hover {
+          background-color: var(--light-grey);
+        }
+      }
     }
 
     .contact-description {
