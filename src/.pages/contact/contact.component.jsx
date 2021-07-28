@@ -9,14 +9,14 @@ const Contact = () => {
   function sendEmail(e) {
     e.preventDefault();
 
-    // emailjs.sendForm("gmail", "template_m3ir59b", e.target, "user_ftr2BKAL9f4jD8hvam3AS").then(
-    //   (result) => {
-    //     console.log(result.text);
-    //   },
-    //   (error) => {
-    //     console.log(error.text);
-    //   }
-    // );
+    emailjs.sendForm("gmail", "template_m3ir59b", e.target, "user_ftr2BKAL9f4jD8hvam3AS").then(
+      (result) => {
+        console.log(result.text);
+      },
+      (error) => {
+        console.log(error.text);
+      }
+    );
 
     setToastActive(true);
     console.log(toastActive);
