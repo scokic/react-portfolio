@@ -5,16 +5,16 @@
   .single-post-container {
     display: flex;
     flex-direction: column;
+    max-width: 800px;
 
     .post-title {
-      max-width: 1200px;
       text-align: center;
       margin: 1.5rem auto 6.5rem auto;
     }
 
     .featured-image {
       max-width: 100%;
-      border-radius: 32px;
+      border-radius: 20px;
       margin: auto;
       margin-bottom: 3rem;
       height: auto;

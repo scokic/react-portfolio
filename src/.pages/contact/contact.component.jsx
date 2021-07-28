@@ -62,20 +62,20 @@ const Contact = () => {
             <h3>Write to me!</h3>
             <form onSubmit={sendEmail}>
               <label>
-                Name
-                <input className='input-field' placeholder='Name' type='text' name='name' />
+                <input className='input-text' type='text' required name='name' />
+                <span className='floating-label'>Name</span>
               </label>
               <label>
-                Email
-                <input className='input-field' placeholder='Email' type='email' name='email' />
+                <input className='input-text' type='email' required name='email' />
+                <span className='floating-label'>Email</span>
               </label>
               <label>
-                Subject
-                <input className='input-field' placeholder='Subject' type='text' name='subject' />
+                <input className='input-text' type='text' required name='subject' />
+                <span className='floating-label'>Subject</span>
               </label>
               <label>
-                Message
-                <textarea className='input-field' placeholder='Message' rows='3' type='textarea' name='message' />
+                <textarea className='input-text' rows='5' required type='textarea' name='message' />
+                <span className='floating-label'>Message</span>
               </label>
               <input className='submit-button custom-button' type='submit' />
             </form>
