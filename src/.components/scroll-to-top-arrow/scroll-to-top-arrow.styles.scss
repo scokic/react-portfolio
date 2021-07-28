@@ -8,21 +8,24 @@
   z-index: 500;
 
   .scroll-to-top-button {
-    background-color: transparent;
     height: 2.5rem;
     width: 2.5rem;
     display: grid;
     place-items: center;
-    border-radius: 4px;
     transition: 0.2s ease;
+    border-radius: 4px;
+    background-color: var(--white);
+    box-shadow: var(--box-shadow);
 
     .icon {
       font-size: 1.25rem;
     }
+  }
+}
 
-    &:hover {
-      background-color: var(--white);
-      box-shadow: var(--box-shadow);
-    }
+@media only screen and (max-width: 600px) {
+  .scroll-to-top-button-wrapper {
+    bottom: 1.5rem;
+    right: 1.5rem;
   }
 }

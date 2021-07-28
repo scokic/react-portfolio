@@ -22,6 +22,8 @@ function App() {
 
   const [blogPosts, setBlogPosts] = useRecoilState(RecoilBlogPosts);
 
+  // defining form for blog posts json response
+
   const query = `{
     blogPostCollection {
       items {
@@ -40,8 +42,6 @@ function App() {
     }
   }
   `;
-
-  // fetching blog posts from contentful
 
   useEffect(() => {
     fetch(`https://graphql.contentful.com/content/v1/spaces/umewgum9wl89/`, {
