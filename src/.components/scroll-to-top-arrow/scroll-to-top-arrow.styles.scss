@@ -1,5 +1,3 @@
-@import "../../setup/colors.scss";
-
 .scroll-to-top-button-wrapper {
   position: fixed;
   bottom: 3rem;
@@ -14,7 +12,7 @@
     place-items: center;
     transition: 0.2s ease;
     border-radius: 4px;
-    background-color: var(--white);
+    background-color: var(--background-primary);
     box-shadow: var(--box-shadow);
 
     .icon {

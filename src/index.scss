@@ -1,25 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;500;600;900&display=swap");
-
 @import "./setup/colors.scss";
 
 * {
   margin: 0;
   box-sizing: border-box;
   font-size: 16px;
-  color: var(--black);
+  color: var(--text-primary);
   font-family: "Red Hat Text", sans-serif;
 }
 
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-primary);
 }
 
 code {
-  background: #e3e3e3;
+  background: #1a1a1a;
   border-radius: 5px;
-  padding: 5px 5px;
-  color: #4d4d4d;
+  padding: 1rem;
+  padding-top: 2rem;
+  color: #fcfbfe;
   font-family: monospace;
   font-size: 0.9rem;
   display: block;
@@ -102,12 +103,12 @@ p {
 }
 
 ::-webkit-scrollbar-track {
-  background: transparent;
+  background: var(--background-primary);
 }
 
 ::-webkit-scrollbar-thumb {
   background: var(--blue);
-  border-radius: 0;
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {

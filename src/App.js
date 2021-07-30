@@ -19,7 +19,6 @@ import { useTransition, animated } from "react-spring";
 
 function App() {
   // fetching blog posts from contentful
-
   const [blogPosts, setBlogPosts] = useRecoilState(RecoilBlogPosts);
 
   // defining form for blog posts json response

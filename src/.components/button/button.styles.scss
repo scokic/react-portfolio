@@ -6,7 +6,7 @@
   background-color: var(--blue);
   padding: 0.75rem 2rem;
   border-radius: 4px;
-  color: var(--white);
+  color: var(--white) !important;
   cursor: pointer;
   transition: 0.1s;
   text-decoration: none;
@@ -19,7 +19,7 @@
 
 .transparent-button {
   background-color: transparent;
-  color: var(--black);
+  color: var(--text-primary);
   position: relative;
 
   &::after {
@@ -37,18 +37,18 @@
     background-color: transparent;
 
     &::after {
-      background-color: var(--black);
+      background-color: var(--text-primary);
     }
   }
 }
 
 .white-button {
-  background-color: var(--white);
-  color: var(--black);
+  background-color: var(--background-primary);
+  color: var(--text-primary) !important;
 
   &:hover {
     box-shadow: none;
-    background-color: var(--light-grey);
+    background-color: var(--text-primary);
   }
 }
 

@@ -1,13 +1,16 @@
 @import "../../setup/colors.scss";
 
 .navbar-wrapper {
-  background-color: var(--white);
+  background-color: var(--background-primary);
   padding: 1rem !important;
   z-index: 999;
   position: fixed;
   width: 100%;
   top: 0;
-  border-color: var(--light-grey);
+
+  * {
+    color: var(--text-primary);
+  }
 
   .navbar-container {
     display: flex;
@@ -21,13 +24,11 @@
         font-weight: bold;
         font-size: 1.75rem;
         padding-bottom: 0.2rem;
-        border-bottom: solid 2.5px transparent;
         text-decoration: none;
-        color: var(--black);
+        color: var(--text-primary);
 
         &:hover {
           cursor: pointer;
-          border-color: var(--black);
         }
       }
     }
@@ -40,13 +41,11 @@
         .nav-link {
           margin-left: 1.5rem;
           padding-bottom: 0.2rem;
-          border-bottom: solid 2px transparent;
-          color: var(--black);
+          color: var(--text-primary);
           text-decoration: none;
 
           &:hover {
             cursor: pointer;
-            border-color: var(--black);
           }
         }
 
@@ -80,7 +79,7 @@
         width: 100%;
         bottom: 0;
         left: 0;
-        background-color: var(--white);
+        background-color: var(--background-primary);
 
         li {
           .nav-link {
@@ -101,9 +100,14 @@
       .button-container {
         position: fixed;
         bottom: 1rem;
-        left: 1rem;
+        left: 5vw;
+        right: 5vw;
         margin: 0;
-        width: 100%;
+
+        a {
+          display: block;
+          text-align: center;
+        }
       }
 
       .hamburger-wrapper {

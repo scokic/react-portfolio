@@ -1,7 +1,7 @@
 @import "../../setup/colors.scss";
 
 .footer-wrapper {
-  background-color: var(--light-grey);
+  background-color: var(--background-primary);
   padding: 3rem 0;
 
   .footer-container {
@@ -18,7 +18,7 @@
         padding-bottom: 0.2rem;
         border-bottom: solid 2.5px transparent;
         text-decoration: none;
-        color: var(--black);
+        color: var(--text-primary);
 
         &:hover {
           cursor: pointer;
