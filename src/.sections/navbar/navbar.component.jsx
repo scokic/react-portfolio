@@ -3,9 +3,9 @@ import { NavLink } from "react-router-dom";
 
 import Button from "../../.components/button/button.component";
 import "./navbar.styles.scss";
-import { FiMenu } from "react-icons/fi";
+import { FiLink, FiMenu, FiSun, FiMoon } from "react-icons/fi";
 
-function Navbar() {
+function Navbar({ darkTheme, toggleDarkTheme }) {
   const [scrolled, setScrolled] = useState(false);
   const [navOpen, toggleNavOpen] = useState(false);
 
@@ -57,12 +57,15 @@ function Navbar() {
           </li>
         </nav>
         <div className='button-container' onClick={toggleMobileNavOpen}>
+          <div onClick={toggleDarkTheme} className='dark-theme-button-desktop'>
+            {darkTheme ? <FiSun /> : <FiMoon />}
+          </div>
           <NavLink className='nav-link custom-button' exact activeClassName='nav-link active' to='/contact'>
             Contact
           </NavLink>
-          {
-            // <Button blank fullwidth text='Contact' url='https://www.linkedin.com/in/strahinjacokic/' />
-          }
+        </div>
+        <div onClick={toggleDarkTheme} className='dark-theme-button-mobile'>
+          {darkTheme ? <FiSun /> : <FiMoon />}
         </div>
         <div className='hamburger-wrapper' onClick={toggleMobileNavOpen}>
           <FiMenu className='hamburger-icon' />

@@ -57,11 +57,25 @@
 
     .button-container {
       margin-left: 1rem;
+      display: flex;
+      align-items: center;
+
+      div {
+        margin-right: 2rem;
+
+        * {
+          font-size: 1.25rem;
+        }
+      }
     }
 
     .hamburger-wrapper {
       display: none;
     }
+  }
+
+  .dark-theme-button-mobile {
+    display: none;
   }
 }
 
@@ -70,6 +84,21 @@
 }
 
 @media screen and (max-width: 600px) {
+  .dark-theme-button-desktop {
+    display: none;
+  }
+
+  .dark-theme-button-mobile {
+    display: block !important;
+    position: fixed;
+    top: 1.4rem;
+    right: 4rem;
+
+    * {
+      font-size: 1.5rem;
+    }
+  }
+
   .navbar-wrapper {
     .navbar-container {
       nav {

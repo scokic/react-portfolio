@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Switch, Route, useLocation } from "react-router-dom";
 import { __RouterContext } from "react-router";
 import Navbar from "./.sections/navbar/navbar.component";
@@ -73,10 +73,21 @@ function App() {
     leave: { display: "none" },
   });
 
+  // dark theme state and function
+
+  const [darkTheme, setDarkTheme] = useState(false);
+
+  const toggleDarkTheme = () => {
+    document.body.classList.toggle("dark");
+    let prevState = darkTheme;
+    setDarkTheme(!prevState);
+    console.log(darkTheme);
+  };
+
   return (
     <div className='App'>
       <ScrollToTop />
-      <Navbar />
+      <Navbar darkTheme={darkTheme} toggleDarkTheme={toggleDarkTheme} />
       <ScrollToTopArrow />
 
       <div className='absolute-wrapper'>
