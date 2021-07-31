@@ -9,7 +9,7 @@ export const RecoilProjects = atom({
       demoLink: "https://spending-insider.web.app/",
       githubLink: "",
       description: "I'm currently building a personal finance tracker app with React and Firebase.",
-      image: "/images/project-screenshots/Spending Insider.png",
+      image: "/images/project-screenshots/Spending-Insider.webp",
       progress: "in-progress",
     },
     {
@@ -18,7 +18,7 @@ export const RecoilProjects = atom({
       demoLink: "https://scokic.github.io/simpletodoapp/",
       githubLink: "https://github.com/scokic/simpletodoapp",
       description: "Complete CRUD functionality with some beautiful CSS that inspires users to create new tasks.",
-      image: "/images/project-screenshots/Simple Todo App.png",
+      image: "/images/project-screenshots/Simple-Todo-App.webp",
     },
     {
       name: "Personal Portfolio",
@@ -26,7 +26,7 @@ export const RecoilProjects = atom({
       demoLink: "https://strahinjacokic.com/",
       githubLink: "https://github.com/scokic/personal-portfolio-website/",
       description: "I designed and created first version of my personal portfolio with vanilla HTML, CSS, and JS.",
-      image: "/images/project-screenshots/Personal Portfolio v1.png",
+      image: "/images/project-screenshots/Personal-Portfolio-v1.webp",
     },
     {
       name: "Marvel Heroes Cards",
