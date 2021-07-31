@@ -18,7 +18,7 @@ const HomepageHeroSection = () => {
         </div>
 
         <div className='img-container'>
-          <img src='/images/Profile.webp' />
+          <img rel='preload' src='/images/Profile.webp' />
         </div>
       </div>
     </div>
