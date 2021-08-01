@@ -9,7 +9,7 @@ const DevToolsSection = () => {
       name: "HTML",
       image: "/images/tools/html5-logo.svg",
       link: "JSurl",
-      description: "The first thing I ever wrote was <div></div> and therefore HTML has a special place in my heart. I love using HTML in combination with JavaScript and CSS to create single page apps.",
+      description: "The first line of code I ever wrote was <div></div> and therefore HTML has a special place in my heart. I love using HTML in combination with JavaScript and CSS to create single page apps.",
     },
     {
       id: 1,
@@ -78,7 +78,7 @@ const DevToolsSection = () => {
 
   const [activeTool, setActiveTool] = useState(3);
 
-  // create automated loop through the lis which pauses on section hover
+  // TODO: create automated loop through the list which pauses on section hover
 
   const devToolsList = devTools.map((tool) => <DevToolCard key={tool.id} idx={tool.id} name={tool.name} image={tool.image} link={tool.link} setActiveTool={setActiveTool} activeCard={activeTool} />);
 

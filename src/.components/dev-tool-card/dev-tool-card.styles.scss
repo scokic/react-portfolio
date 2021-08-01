@@ -6,9 +6,12 @@
   position: relative;
   cursor: pointer;
   z-index: 10;
+  transition: 0.2s ease;
 
   &:hover {
     background-color: var(--background-primary);
+    box-shadow: 0 0 20px #00000020;
+    transform: scale(1.2);
   }
 
   .dev-tool-icon {
@@ -20,23 +23,6 @@
     position: relative;
     overflow: hidden;
 
-    // &::before,
-    // &::after {
-    //   content: "";
-    //   height: 100%;
-    //   width: 40px;
-    //   background-color: var(--background-secondary);
-    //   top: 0;
-    //   left: 0;
-    //   position: absolute;
-    //   transform: skew(-40deg) translateX(-50px);
-    //   opacity: 0;
-    // }
-
-    // &::after {
-    //   width: 20px !important;
-    // }
-
     img {
       max-height: 5rem;
       max-width: 5rem;
@@ -46,6 +32,8 @@
 
 .active-card {
   background-color: var(--background-primary);
+  box-shadow: 0 0 20px #00000020;
+  transform: scale(1.2);
 }
 
 @media screen and (max-width: 600px) {
