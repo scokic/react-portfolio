@@ -28,6 +28,7 @@ function App() {
       items {
         sys {
           id
+          publishedAt
         }
         content{
           json
@@ -81,7 +82,6 @@ function App() {
     document.body.classList.toggle("dark");
     let prevState = darkTheme;
     setDarkTheme(!prevState);
-    console.log(darkTheme);
   };
 
   return (

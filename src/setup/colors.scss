@@ -6,7 +6,7 @@ body {
   --blue-light: hsl(220, 82%, 89%);
   --blue-dark: hsl(220, 100%, 50%);
   --background-primary: #ffffff;
-  --background-secondary: #fcfbfe;
+  --background-secondary: #f5f5f7;
   --text-primary: #202024;
   --light-grey: #f4f6f9;
   --border-grey: lightgrey;
@@ -14,8 +14,7 @@ body {
 }
 
 body.dark {
-  --background-primary: #101010;
-  --background-secondary: #1a1a1a;
-  // --background-secondary: #202020;
+  --background-primary: #061018;
+  --background-secondary: #0b1a28;
   --text-primary: #c2c2c2;
 }

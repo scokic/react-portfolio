@@ -4,6 +4,11 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  background-color: var(--background-secondary);
+
+  .three-projects-section-description {
+    margin-bottom: 0 !important;
+  }
 
   .custom-button-wrapper {
     margin: auto;

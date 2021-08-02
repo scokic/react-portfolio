@@ -6,16 +6,30 @@
   border-radius: 8px;
   display: flex;
   flex-direction: column;
-  transition: 0.2s ease-out;
-  box-shadow: 0 0 3em -0.125em rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.02);
+  transition: 0.15s ease-out;
+  box-shadow: 0 0 3em -0.125em rgba(10, 10, 10, 0.05), 0 0 0 1px rgba(10, 10, 10, 0.02);
   margin: 1rem;
   max-width: 350px;
   position: relative;
-  background-color: var(--background-secondary);
+  background-color: var(--background-primary);
 
   &:hover {
     transform: translateY(-5px);
-    box-shadow: 0 0 3em -0.125em rgba(10, 10, 10, 0.25), 0 0 0 1px rgba(10, 10, 10, 0.02);
+    box-shadow: 0 0 3em -0.125em rgba(10, 10, 10, 0.15), 0 0 0 1px rgba(10, 10, 10, 0.02);
+
+    .card-container {
+      .blog-card-info-wrapper {
+        .card-footer {
+          .read-more-button {
+            color: var(--blue-dark);
+
+            .arrow-icon {
+              transform: translateX(3px);
+            }
+          }
+        }
+      }
+    }
   }
 
   .card-container {
@@ -27,33 +41,55 @@
     .post-image {
       border-radius: 8px;
       margin-bottom: auto;
-      width: 100%;
+      max-width: 330px;
     }
 
-    .post-title {
-      font-size: 1.5rem;
-      font-weight: bold;
-      margin-top: 1rem;
-    }
-    .post-summary {
-      font-size: 1rem;
-      margin-top: 0.5rem;
-    }
-
-    .read-more-button {
-      align-self: flex-end;
-      margin-top: 1rem;
+    .blog-card-info-wrapper {
       display: flex;
-      align-items: center;
-      text-decoration: none;
-      color: var(--blue);
+      flex-direction: column;
+      padding: 0.75rem;
+      flex-grow: 1;
 
-      .arrow-icon {
-        margin-left: 0.5rem;
+      .post-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
       }
 
-      &:hover {
-        color: var(--blue-dark);
+      .post-summary {
+        font-size: 1rem;
+        flex-grow: 1;
+        min-height: 5rem;
+        margin-bottom: 2rem;
+      }
+
+      .card-footer {
+        display: flex;
+        justify-content: space-between;
+
+        .read-more-button,
+        .post-date {
+          align-self: flex-end;
+          display: flex;
+          align-items: center;
+          text-decoration: none;
+          color: var(--blue);
+
+          .arrow-icon {
+            margin-left: 0.5rem;
+            transition: 0.15s ease-out;
+          }
+        }
+
+        .post-date {
+          color: var(--text-primary);
+          font-size: 0.9rem;
+
+          &:hover {
+            color: var(--text-primary);
+          }
+        }
       }
     }
   }

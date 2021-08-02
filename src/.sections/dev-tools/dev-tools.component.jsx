@@ -7,14 +7,14 @@ const DevToolsSection = () => {
     {
       id: 0,
       name: "HTML",
-      image: "/images/tools/html5-logo.svg",
+      image: "/images/tools/html-logo.png",
       link: "JSurl",
       description: "The first line of code I ever wrote was <div></div> and therefore HTML has a special place in my heart. I love using HTML in combination with JavaScript and CSS to create single page apps.",
     },
     {
       id: 1,
       name: "CSS",
-      image: "/images/tools/css-logo.svg",
+      image: "/images/tools/css-logo.png",
       link: "TSurl",
       description:
         "Probably one of my favourite things about web development. I could spend days and weeks on CSS and thinkering with positioning and animations. I love using keyframes to create beautiful animations that end users can not miss noticing.",

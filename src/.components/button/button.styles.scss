@@ -19,7 +19,7 @@
 
 .transparent-button {
   background-color: transparent;
-  color: var(--text-primary);
+  color: var(--text-primary) !important;
   position: relative;
 
   &::after {

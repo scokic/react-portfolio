@@ -23,7 +23,7 @@ export const RecoilProjects = atom({
     {
       name: "Personal Portfolio",
       framework: "JavaScript",
-      demoLink: "https://strahinjacokic.com/",
+      demoLink: "https://scokic.github.io/personal-portfolio-website/",
       githubLink: "https://github.com/scokic/personal-portfolio-website/",
       description: "I designed and created first version of my personal portfolio with vanilla HTML, CSS, and JS.",
       image: "/images/project-screenshots/Personal-Portfolio-v1.webp",
