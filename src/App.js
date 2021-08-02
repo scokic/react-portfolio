@@ -15,6 +15,8 @@ import ScrollToTop from "./.sections/scroll-to-top/scroll-to-top.component";
 import BlogPosts from "./.pages/blog-posts/blog-posts.component";
 import SingleBlogPost from "./.pages/single-blog-post/single-blog-post.component";
 
+import ReactGA from "react-ga";
+
 import { useTransition, animated } from "react-spring";
 
 function App() {
@@ -42,6 +44,11 @@ function App() {
     }
   }
   `;
+
+  let initializaGoogleAnalytics = () => {
+    ReactGA.initialize("G-4XXQZSCZNV");
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  };
 
   useEffect(() => {
     fetch(`https://graphql.contentful.com/content/v1/spaces/umewgum9wl89/`, {
@@ -85,27 +92,30 @@ function App() {
   };
 
   return (
-    <div className='App'>
-      <ScrollToTop />
-      <Navbar darkTheme={darkTheme} toggleDarkTheme={toggleDarkTheme} />
-      <ScrollToTopArrow />
+    initializaGoogleAnalytics(),
+    (
+      <div className='App'>
+        <ScrollToTop />
+        <Navbar darkTheme={darkTheme} toggleDarkTheme={toggleDarkTheme} />
+        <ScrollToTopArrow />
 
-      <div className='absolute-wrapper'>
-        {transitions((props, item) => (
-          <animated.div style={props}>
-            <Switch location={item}>
-              <Route exact path='/' component={Homepage} className='page-content' />
-              <Route exact path='/portfolio' component={Portfolio} className='page-content' />
-              <Route exact path='/contact' component={Contact} className='page-content' />
-              <Route exact path='/blog-posts' component={BlogPosts} className='page-content' />
-              <Route component={SingleBlogPost} path='/blog-posts/:id' className='page-content' />
-              <Route path='/' render={() => <div>404</div>} className='page-content' />
-            </Switch>
-            <Footer />
-          </animated.div>
-        ))}
+        <div className='absolute-wrapper'>
+          {transitions((props, item) => (
+            <animated.div style={props}>
+              <Switch location={item}>
+                <Route exact path='/' component={Homepage} className='page-content' />
+                <Route exact path='/portfolio' component={Portfolio} className='page-content' />
+                <Route exact path='/contact' component={Contact} className='page-content' />
+                <Route exact path='/blog-posts' component={BlogPosts} className='page-content' />
+                <Route component={SingleBlogPost} path='/blog-posts/:id' className='page-content' />
+                <Route path='/' render={() => <div>404</div>} className='page-content' />
+              </Switch>
+              <Footer />
+            </animated.div>
+          ))}
+        </div>
       </div>
-    </div>
+    )
   );
 }
 
