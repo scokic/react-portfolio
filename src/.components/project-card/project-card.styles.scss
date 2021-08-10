@@ -9,9 +9,9 @@
   min-width: 300px;
   position: relative;
   background-color: var(--background-primary);
+  transform: translateY(-5px);
 
   /* in progress ribbon */
-
   .in-progress-ribbon {
     width: 150px;
     height: 150px;
@@ -71,7 +71,7 @@
   }
 
   &:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
     box-shadow: 0 0 3em -0.125em rgba(10, 10, 10, 0.25), 0 0 0 1px rgba(10, 10, 10, 0.02);
   }
 
