@@ -9,7 +9,8 @@ const Button = ({ text, url, transparent, blank, white, fullwidth }) => {
       className={`custom-button
     ${transparent ? "transparent-button" : ""}
     ${white ? "white-button" : ""} 
-    ${fullwidth ? "fullwidth" : ""} `}>
+    ${fullwidth ? "fullwidth" : ""} `}
+    >
       {text}
     </a>
   );

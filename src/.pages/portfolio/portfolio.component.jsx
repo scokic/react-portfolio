@@ -5,7 +5,7 @@ import ContactSection from "../../.sections/contact-section/contact-section.comp
 
 function Portfolio() {
   return (
-    <div className='portfolio-wrapper'>
+    <div className="portfolio-wrapper">
       <ProjectsSection />
       <ContactSection />
     </div>

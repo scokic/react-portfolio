@@ -10,11 +10,15 @@ const ProjectCard = (props) => {
     { name: "JavaScript", url: "/images/tools/javascript-logo.svg" },
     { name: "Svelte", url: "/images/tools/svelte-logo.svg" },
     { name: "Vue", url: "/images/tools/vue-logo.svg" },
-    { name: "Wordpress", url: "/images/tools/wordpress-logo.png" },
+    { name: "WordPress", url: "/images/tools/wordpress-logo.png" },
   ];
 
   let findFramework = () => {
-    frameworkImageLinks.forEach((framework) => (props.framework === framework.name ? setProjectFramework(framework.url) : ""));
+    frameworkImageLinks.forEach((framework) =>
+      props.framework[0] === framework.name
+        ? setProjectFramework(framework.url)
+        : ""
+    );
   };
 
   useEffect(() => {
@@ -22,51 +26,48 @@ const ProjectCard = (props) => {
   }, []);
 
   return (
-    <div className='project-card-wrapper'>
-      <a className='project-screenshot' href={props.demoLink} target='_blank'>
+    <div className="project-card-wrapper">
+      <a className="project-screenshot" href={props.demoLink} target="_blank">
         <img src={props.image} alt={props.name} />
       </a>
-      <div className='card-description'>
-        <div className='project-name-section'>
-          <div className='framework-grid'>
-            <img className='framework-icon' src={projectFramework} />
-            <span>{props.framework}</span>
+      <div className="card-description">
+        <div className="project-name-section">
+          <div className="framework-grid">
+            <img className="framework-icon" src={projectFramework} />
+            <span>{props.framework[0]}</span>
           </div>
-          <span className='project-name'>{props.name}</span>
+          <span className="project-name">{props.name}</span>
         </div>
-        <div className='project-description'>
+        <div className="project-description">
           <p>{props.description}</p>
         </div>
 
-        {
-          // render buttons on card
-          // render "website" button if it is wordpress website
-          // render "demo" and "github" if it is not wordpress website
+        {// render buttons on card
+        // render "website" button if it is wordpress website
+        // render "demo" and "github" if it is not wordpress website
 
-          props.framework === "Wordpress" ? (
-            <div className='project-links'>
-              <Button blank text='Visit Website' url={props.demoLink} />
-            </div>
-          ) : props.githubLink === "" ? (
-            <div className='project-links'>
-              <Button blank text='Open App' url={props.demoLink} />
-            </div>
-          ) : (
-            <div className='project-links'>
-              <Button blank text='Demo' url={props.demoLink} /> <Button transparent blank text='GitHub' url={props.githubLink} />{" "}
-            </div>
-          )
-        }
+        props.framework[0] === "WordPress" ? (
+          <div className="project-links">
+            <Button blank text="Visit Website" url={props.demoLink} />
+          </div>
+        ) : props.githubLink === "" ? (
+          <div className="project-links">
+            <Button blank text="Open App" url={props.demoLink} />
+          </div>
+        ) : (
+          <div className="project-links">
+            <Button blank text="Demo" url={props.demoLink} />{" "}
+            <Button transparent blank text="GitHub" url={props.githubLink} />{" "}
+          </div>
+        )}
       </div>
 
-      {
-        // render in progress ribbon if project is in progress
-        props.progress === "in-progress" ? (
-          <div className='in-progress-ribbon'>
-            <span>IN PROGRESS</span>
-          </div>
-        ) : null
-      }
+      {// render in progress ribbon if project is in progress
+      props.progress === "in-progress" ? (
+        <div className="in-progress-ribbon">
+          <span>IN PROGRESS</span>
+        </div>
+      ) : null}
     </div>
   );
 };
