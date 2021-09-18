@@ -6,3 +6,11 @@
     flex-wrap: wrap;
   }
 }
+
+@media only screen and (max-width: 767px) {
+  .projects-section-wrapper {
+    .projects-section-container {
+      margin-left: 0;
+    }
+  }
+}
