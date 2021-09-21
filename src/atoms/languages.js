@@ -50,6 +50,12 @@ export const Languages = atom({
       description:
         "Best free tool to build websites fast and deliver quick wins to your clients. I've built a couple of websites that end users can maintain themselves.",
     },
+    {
+      name: "HubL",
+      image: "/images/tools/hubspot-hubl-logo.svg",
+      description:
+        "HubL is a templating language for HubSpot CMS which is used throughout HubSpot ecosystem. I'm currently using HubL in combination with HTML, CSS, and JS to create templates and modules in HubSpot CMS which allow users to use and edit content via HubSpot drag and drop editor.",
+    },
     // {
     //   name: "VS Code",
     //   image: "/images/tools/visual-studio-code-logo.svg",
@@ -62,11 +68,5 @@ export const Languages = atom({
     //     description:
     //     "Whoever worked in a team or built a bit complex app can appreciate Git. Thanks to Git, I never worry about where my code is, how I'll find and fix a bug, or how I can recover previous version of the software. I mostly use Git via GitHub, where I store all my personal projects.",
     // },
-    {
-      name: "HubL",
-      image: "/images/tools/hubspot-hubl-logo.svg",
-      description:
-        "HubL is a templating language for HubSpot CMS which is used throughout HubSpot ecosystem. I'm currently using HubL in combination with HTML, CSS, and JS to create templates and modules in HubSpot CMS which allow users to use and edit content via HubSpot drag and drop editor.",
-    },
   ],
 });
