@@ -14,15 +14,39 @@ const ProjectsGrid = ({ filteredState }) => {
       <ProjectCard key={project.name} {...project} />
     ));
   } else {
-    projectList = projects
-      .filter((project) => project.framework.includes(filteredState))
-      .map((project) => <ProjectCard key={project.name} {...project} />);
+    if (
+      projects.filter((project) => project.framework.includes(filteredState))
+        .length == 0
+    ) {
+      projectList = (
+        <>
+          <p>
+            Sorry, currently there are no projects built with {filteredState} to
+            show you. 😞
+          </p>
+          <p style={{ marginTop: "25px" }}>
+            Contact me and I'll explain to you what I did with {filteredState}{" "}
+            in more details! 😊
+          </p>
+        </>
+      );
+    } else {
+      projectList = projects
+        .filter((project) => project.framework.includes(filteredState))
+        .map((project) => <ProjectCard key={project.name} {...project} />);
+    }
   }
 
   return (
-    <div className="projects-section-container section-container">
-      {projectList}
-    </div>
+    console.log(
+      projects.filter((project) => project.framework.includes(filteredState))
+        .length
+    ),
+    (
+      <div className="projects-section-container section-container">
+        {projectList}
+      </div>
+    )
   );
 };
 

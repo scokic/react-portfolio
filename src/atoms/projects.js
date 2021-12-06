@@ -4,6 +4,16 @@ export const RecoilProjects = atom({
   key: "projects",
   default: [
     {
+      name: "Perlima App",
+      framework: ["React", "HTML", "Sass", "Firebase"],
+      demoLink: "https://perlima-app.web.app/",
+      githubLink: "",
+      description:
+        "I'm currently building a personal task manager app with React and Firebase.",
+      image: "/images/project-screenshots/Perlima-App.webp",
+      progress: "in-progress",
+    },
+    {
       name: "Spending Insider App",
       framework: ["React", "HTML", "Sass", "Firebase"],
       demoLink: "https://spending-insider.web.app/",
