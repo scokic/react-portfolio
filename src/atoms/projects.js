@@ -4,32 +4,28 @@ export const RecoilProjects = atom({
   key: "projects",
   default: [
     {
+      name: "Spending Insider App",
+      framework: ["React", "HTML", "Sass", "Supabase"],
+      demoLink: "https://spending-insider-supabase.vercel.app/",
+      githubLink: "",
+      description: "I'm currently building a personal finance PWA with React and Supabase. Check it out!",
+      image: "/images/project-screenshots/spending-insider.png",
+      progress: "in-progress",
+    },
+    {
       name: "Perlima App",
       framework: ["React", "HTML", "Sass", "Firebase"],
       demoLink: "https://perlima-app.web.app/",
       githubLink: "",
-      description:
-        "I'm currently building a personal task manager app with React and Firebase.",
+      description: "I'm currently building a personal task manager app with React and Firebase.",
       image: "/images/project-screenshots/Perlima-App.webp",
-      progress: "in-progress",
-    },
-    {
-      name: "Spending Insider App",
-      framework: ["React", "HTML", "Sass", "Firebase"],
-      demoLink: "https://spending-insider.web.app/",
-      githubLink: "",
-      description:
-        "I'm currently building a personal finance tracker app with React and Firebase.",
-      image: "/images/project-screenshots/Spending-Insider.webp",
-      progress: "in-progress",
     },
     {
       name: "Simple Todo App",
       framework: ["React", "HTML", "Sass"],
       demoLink: "https://scokic.github.io/simpletodoapp/",
       githubLink: "https://github.com/scokic/simpletodoapp",
-      description:
-        "Complete CRUD functionality with some beautiful CSS that inspires users to create new tasks.",
+      description: "Complete CRUD functionality with some beautiful CSS that inspires users to create new tasks.",
       image: "/images/project-screenshots/Simple-Todo-App.webp",
     },
     {
@@ -37,8 +33,7 @@ export const RecoilProjects = atom({
       framework: ["JavaScript", "HTML", "CSS"],
       demoLink: "https://scokic.github.io/personal-portfolio-website/",
       githubLink: "https://github.com/scokic/personal-portfolio-website/",
-      description:
-        "I designed and created first version of my personal portfolio with vanilla HTML, CSS, and JS.",
+      description: "I designed and created first version of my personal portfolio with vanilla HTML, CSS, and JS.",
       image: "/images/project-screenshots/Personal-Portfolio-v1.webp",
     },
     {
@@ -46,8 +41,7 @@ export const RecoilProjects = atom({
       framework: ["React", "HTML", "CSS"],
       demoLink: "https://marvel-heroes-cards.netlify.app/",
       githubLink: "https://github.com/scokic/marvel-heroes",
-      description:
-        "Did you know that Marvel has open API? Check out some of your favourite Marvel Heroes!",
+      description: "Did you know that Marvel has open API? Check out some of your favourite Marvel Heroes!",
       image: "/images/project-screenshots/Marvel Heroes Cards.png",
     },
     {
@@ -63,8 +57,7 @@ export const RecoilProjects = atom({
       name: "Kanban Board",
       framework: ["JavaScript", "HTML", "CSS"],
       demoLink: "https://strahinjacokic.com/components/Kanban-Board/index.html",
-      githubLink:
-        "https://github.com/scokic/personal-portfolio-website/tree/main/components/Kanban-Board",
+      githubLink: "https://github.com/scokic/personal-portfolio-website/tree/main/components/Kanban-Board",
       description:
         "I designed and coded UI for kanban task management app for users to be able to create new stages and tasks.",
       image: "/images/project-screenshots/Kanban Board.png",
@@ -72,8 +65,7 @@ export const RecoilProjects = atom({
     {
       name: "Two Player Dice Game",
       framework: ["JavaScript"],
-      demoLink:
-        "https://strahinjacokic.com/components/Two%20Player%20Dice%20Game/index.html",
+      demoLink: "https://strahinjacokic.com/components/Two%20Player%20Dice%20Game/index.html",
       githubLink:
         "https://github.com/scokic/personal-portfolio-website/tree/main/components/Two%20Player%20Dice%20Game",
       description:

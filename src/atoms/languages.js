@@ -45,6 +45,12 @@ export const Languages = atom({
         "Free. Efficient. Easy to use. Firebase is first backend-as-a-service tool that I've been using and I love it. I have to learn more about managing data in NoSQL database, but this thing is blazing fast and has great API and documentation!",
     },
     {
+      name: "Supabase",
+      image: "/images/tools/supabase-logo.png",
+      description:
+        "Building a fullstack application as a frontend developer has become so easy that anyone can do it. Thanks to Supabase I can build realtime apps with authorization & authentication without worrying about scalability or backend, while having my data stored in Postgress database.",
+    },
+    {
       name: "WordPress",
       image: "/images/tools/wordpress-logo.png",
       description:
@@ -56,17 +62,5 @@ export const Languages = atom({
       description:
         "HubL is a templating language for HubSpot CMS which is used throughout HubSpot ecosystem. I'm currently using HubL in combination with HTML, CSS, and JS to create templates and modules in HubSpot CMS which allow users to use and edit content via HubSpot drag and drop editor.",
     },
-    // {
-    //   name: "VS Code",
-    //   image: "/images/tools/visual-studio-code-logo.svg",
-    //   description:
-    //     "I use VS Code daily. I use it so much even stopped bothering closing it at the end of the day. There is not much to say that people don't already know: efficient, easy to use, syntax highlighting, and I never found a bug. Simply great tool I have no intention of replacing in the near future.",
-    // },
-    // {
-    //     name: "Git",
-    //     image: "/images/tools/git-logo.svg",
-    //     description:
-    //     "Whoever worked in a team or built a bit complex app can appreciate Git. Thanks to Git, I never worry about where my code is, how I'll find and fix a bug, or how I can recover previous version of the software. I mostly use Git via GitHub, where I store all my personal projects.",
-    // },
   ],
 });
