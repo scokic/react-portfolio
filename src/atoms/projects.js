@@ -6,7 +6,8 @@ export const RecoilProjects = atom({
     {
       name: "Spending Insider App",
       framework: ["React", "HTML", "Sass", "Supabase"],
-      demoLink: "https://spending-insider-supabase.vercel.app/",
+      demoLink: "#",
+      // demoLink: "https://spending-insider-supabase.vercel.app/",
       githubLink: "",
       description: "I'm currently building a personal finance PWA with React and Supabase. Check it out!",
       image: "/images/project-screenshots/spending-insider.png",
