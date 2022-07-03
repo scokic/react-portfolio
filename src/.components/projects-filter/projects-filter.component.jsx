@@ -7,7 +7,7 @@ import "./projects-filter.styles.scss";
 const ProjectsFilter = ({ setFilter }) => {
   const languages = useRecoilValue(Languages);
   const buttons = languages.map((lang) => (
-    <div onClick={() => setFilter(lang.name)}>
+    <div onClick={() => setFilter(lang.name)} key={lang.name}>
       <Button text={lang.name} />
     </div>
   ));

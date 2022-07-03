@@ -51,12 +51,13 @@ function App() {
   };
 
   useEffect(() => {
-    fetch(`https://graphql.contentful.com/content/v1/spaces/umewgum9wl89/`, {
+    const { REACT_APP_CONTENTFUL_SPACEID, REACT_APP_CONTENTFUL_KEY } = process.env;
+
+    fetch(`https://graphql.contentful.com/content/v1/spaces/${REACT_APP_CONTENTFUL_SPACEID}/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        // Authenticate the request
-        Authorization: `Bearer ${process.env.REACT_APP_CONTENTFUL_KEY}`,
+        Authorization: `Bearer ${REACT_APP_CONTENTFUL_KEY}`,
       },
       // send the GraphQL query
       body: JSON.stringify({ query }),

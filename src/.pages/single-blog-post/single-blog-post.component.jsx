@@ -20,13 +20,15 @@ const SingleBlogPost = ({ match }) => {
   `;
 
   useEffect(() => {
+    const { REACT_APP_CONTENTFUL_SPACEID, REACT_APP_CONTENTFUL_KEY } = process.env;
+
     window
-      .fetch(`https://graphql.contentful.com/content/v1/spaces/umewgum9wl89/`, {
+      .fetch(`https://graphql.contentful.com/content/v1/spaces/${REACT_APP_CONTENTFUL_SPACEID}/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
           // Authenticate the request
-          Authorization: "Bearer Q6JNQAdiaeqJKq-lpS-2EDGoU-0yQia_EGri38UqUWw",
+          Authorization: `Bearer ${REACT_APP_CONTENTFUL_KEY}`,
         },
         // send the GraphQL query
         body: JSON.stringify({ query }),
@@ -46,13 +48,17 @@ const SingleBlogPost = ({ match }) => {
     return <div>loading</div>;
   } else {
     return (
-      <div className='single-post-wrapper section-wrapper'>
-        <div className='single-post-container section-container'>
-          <h1 className='post-title'>{blogPost.blogPost.title}</h1>
+      <div className="single-post-wrapper section-wrapper">
+        <div className="single-post-container section-container">
+          <h1 className="post-title">{blogPost.blogPost.title}</h1>
 
-          <img className='featured-image' src={blogPost.blogPost.image.url} />
+          <img className="featured-image" src={blogPost.blogPost.image.url} />
 
-          {!blogPost.blogPost.content.json ? "" : <div className='post-rich-text'>{documentToReactComponents(blogPost.blogPost.content.json)}</div>}
+          {!blogPost.blogPost.content.json ? (
+            ""
+          ) : (
+            <div className="post-rich-text">{documentToReactComponents(blogPost.blogPost.content.json)}</div>
+          )}
         </div>
       </div>
     );
