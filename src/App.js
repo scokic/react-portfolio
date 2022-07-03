@@ -56,7 +56,7 @@ function App() {
       headers: {
         "Content-Type": "application/json",
         // Authenticate the request
-        Authorization: "Bearer Q6JNQAdiaeqJKq-lpS-2EDGoU-0yQia_EGri38UqUWw",
+        Authorization: `Bearer ${process.env.REACT_APP_CONTENTFUL_KEY}`,
       },
       // send the GraphQL query
       body: JSON.stringify({ query }),
@@ -94,21 +94,21 @@ function App() {
   return (
     initializaGoogleAnalytics(),
     (
-      <div className='App'>
+      <div className="App">
         <ScrollToTop />
         <Navbar darkTheme={darkTheme} toggleDarkTheme={toggleDarkTheme} />
         <ScrollToTopArrow />
 
-        <div className='absolute-wrapper'>
+        <div className="absolute-wrapper">
           {transitions((props, item) => (
             <animated.div style={props}>
               <Switch location={item}>
-                <Route exact path='/' component={Homepage} className='page-content' />
-                <Route exact path='/portfolio' component={Portfolio} className='page-content' />
-                <Route exact path='/contact' component={Contact} className='page-content' />
-                <Route exact path='/blog-posts' component={BlogPosts} className='page-content' />
-                <Route component={SingleBlogPost} path='/blog-posts/:id' className='page-content' />
-                <Route path='/' render={() => <div>404</div>} className='page-content' />
+                <Route exact path="/" component={Homepage} className="page-content" />
+                <Route exact path="/portfolio" component={Portfolio} className="page-content" />
+                <Route exact path="/contact" component={Contact} className="page-content" />
+                <Route exact path="/blog-posts" component={BlogPosts} className="page-content" />
+                <Route component={SingleBlogPost} path="/blog-posts/:id" className="page-content" />
+                <Route path="/" render={() => <div>404</div>} className="page-content" />
               </Switch>
               <Footer />
             </animated.div>
