@@ -9,7 +9,7 @@ export const RecoilProjects = atom({
       demoLink: "#",
       // demoLink: "https://spending-insider-supabase.vercel.app/",
       githubLink: "",
-      description: "I'm currently building a personal finance PWA with React and Supabase. Check it out!",
+      description: "I'm currently building a personal finance PWA with React and Supabase. Stay tuned!",
       image: "/images/project-screenshots/spending-insider.png",
       progress: "in-progress",
     },
@@ -23,7 +23,7 @@ export const RecoilProjects = atom({
     },
     {
       name: "Simple Todo App",
-      framework: ["React", "HTML", "Sass"],
+      framework: ["JavaScript", "HTML", "CSS"],
       demoLink: "https://scokic.github.io/simpletodoapp/",
       githubLink: "https://github.com/scokic/simpletodoapp",
       description: "Complete CRUD functionality with some beautiful CSS that inspires users to create new tasks.",
@@ -54,25 +54,25 @@ export const RecoilProjects = atom({
         "I love playing darts for fun, so I decided to make a counter for two players playing a game of 501 with Svelte. Give it a go!",
       image: "/images/project-screenshots/Darts Score Counter.png",
     },
-    {
-      name: "Kanban Board",
-      framework: ["JavaScript", "HTML", "CSS"],
-      demoLink: "https://strahinjacokic.com/components/Kanban-Board/index.html",
-      githubLink: "https://github.com/scokic/personal-portfolio-website/tree/main/components/Kanban-Board",
-      description:
-        "I designed and coded UI for kanban task management app for users to be able to create new stages and tasks.",
-      image: "/images/project-screenshots/Kanban Board.png",
-    },
-    {
-      name: "Two Player Dice Game",
-      framework: ["JavaScript"],
-      demoLink: "https://strahinjacokic.com/components/Two%20Player%20Dice%20Game/index.html",
-      githubLink:
-        "https://github.com/scokic/personal-portfolio-website/tree/main/components/Two%20Player%20Dice%20Game",
-      description:
-        "During JavaScript course I made two player game of dices. Winner is the one who reaches 100 points first. Give it a try!",
-      image: "/images/project-screenshots/Two Player Dice Game.png",
-    },
+    // {
+    //   name: "Kanban Board",
+    //   framework: ["JavaScript", "HTML", "CSS"],
+    //   demoLink: "https://strahinjacokic.com/components/Kanban-Board/index.html",
+    //   githubLink: "https://github.com/scokic/personal-portfolio-website/tree/main/components/Kanban-Board",
+    //   description:
+    //     "I designed and coded UI for kanban task management app for users to be able to create new stages and tasks.",
+    //   image: "/images/project-screenshots/Kanban Board.png",
+    // },
+    // {
+    //   name: "Two Player Dice Game",
+    //   framework: ["JavaScript"],
+    //   demoLink: "https://strahinjacokic.com/components/Two%20Player%20Dice%20Game/index.html",
+    //   githubLink:
+    //     "https://github.com/scokic/personal-portfolio-website/tree/main/components/Two%20Player%20Dice%20Game",
+    //   description:
+    //     "During JavaScript course I made two player game of dices. Winner is the one who reaches 100 points first. Give it a try!",
+    //   image: "/images/project-screenshots/Two Player Dice Game.png",
+    // },
     {
       name: "Medana",
       framework: ["WordPress"],

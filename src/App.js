@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Switch, Route, useLocation } from "react-router-dom";
-import { __RouterContext } from "react-router";
 import Navbar from "./.sections/navbar/navbar.component";
 import Footer from "./.sections/footer/footer.component";
 import { useRecoilState } from "recoil";
@@ -71,7 +70,7 @@ function App() {
         // rerender the entire component with new data
         setBlogPosts(data.blogPostCollection.items);
       });
-  }, []);
+  }, [query, setBlogPosts]);
 
   // end of fetching blog posts from contentful
 

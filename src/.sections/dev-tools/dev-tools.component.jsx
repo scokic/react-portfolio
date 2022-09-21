@@ -6,7 +6,7 @@ import "./dev-tools.styles.scss";
 
 const DevToolsSection = () => {
   const devTools = useRecoilValue(Languages);
-  const [activeTool, setActiveTool] = useState(3);
+  const [activeTool, setActiveTool] = useState(4);
 
   // TODO: create automated loop through the list which pauses on section hover
 
@@ -34,6 +34,7 @@ const DevToolsSection = () => {
 
         <div className="single-tool-description-wrapper">
           <div className="single-tool-logo">
+            {console.log(devTools[activeTool].image)}
             <img src={devTools[activeTool].image} />
           </div>
           <div className="divider"></div>

@@ -22,6 +22,12 @@ export const Languages = atom({
         "I love building full fledged webapps and JavaScript is my favourite tool of choice. I love the ecosystem with all the frameworks and I love the fact that I can use JavaScript for both frontend and backend development. I'm mostly using React and Svelte out of the JavaScript ecosystem.",
     },
     {
+      name: "TypeScript",
+      image: "/images/tools/typescript-logo.png",
+      description:
+        "At first I hated it, now I can't imagine building UI without it. I'm continuously learning more about how to best implement and benefit from type checking and auto suggestion that comes when using TypeScript.",
+    },
+    {
       name: "React",
       image: "/images/tools/react-logo.svg",
       description:
@@ -54,7 +60,7 @@ export const Languages = atom({
       name: "WordPress",
       image: "/images/tools/wordpress-logo.png",
       description:
-        "Best free tool to build websites fast and deliver quick wins to your clients. I've built a couple of websites that end users can maintain themselves.",
+        "Best free tool to build websites fast and deliver quick wins to your clients. I've built a couple of websites that clients can maintain themselves.",
     },
     {
       name: "HubL",
