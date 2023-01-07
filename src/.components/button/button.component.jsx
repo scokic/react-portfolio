@@ -10,7 +10,9 @@ const Button = ({ text, url, transparent, blank, white, fullwidth, nonClickable 
     ${transparent && "transparent-button"}
     ${white && "white-button"} 
     ${fullwidth && "fullwidth"}
-    ${nonClickable && "non-clickable"} `}>
+    ${nonClickable && "non-clickable"}
+    `}
+    >
       {text}
     </a>
   );
