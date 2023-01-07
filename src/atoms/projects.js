@@ -19,7 +19,7 @@ export const RecoilProjects = atom({
       githubLink: "https://github.com/AbrosimovVladislav/gunconfig-prebuild-2/tree/main/front",
       description:
         "I've built a visual configurator of gun, where users can try out different components and see it live on a chosen gun.",
-      image: "/images/project-screenshots/Perlima-App.webp",
+      image: "/images/project-screenshots/Gun Configurator.png",
       progress: "in-progress",
     },
     {
