@@ -4,22 +4,10 @@ export const Languages = atom({
   key: "languages",
   default: [
     {
-      name: "HTML",
-      image: "/images/tools/html-logo.png",
-      description:
-        "The first line of code I ever wrote was <div></div> and therefore HTML has a special place in my heart. I love using HTML in combination with JavaScript and CSS to create single page apps.",
-    },
-    {
-      name: "CSS",
-      image: "/images/tools/css-logo.png",
-      description:
-        "Probably one of my favourite things about web development. I could spend days and weeks on CSS and thinkering with positioning and animations. I love using keyframes to create beautiful animations that end users can not miss noticing.",
-    },
-    {
       name: "JavaScript",
       image: "/images/tools/javascript-logo.svg",
       description:
-        "I love building full fledged webapps and JavaScript is my favourite tool of choice. I love the ecosystem with all the frameworks and I love the fact that I can use JavaScript for both frontend and backend development. I'm mostly using React and Svelte out of the JavaScript ecosystem.",
+        "My first programming language. I love the flexibility and simplicity that JavaScript brings to the table. I love building full fledged webapps and JavaScript is my favourite tool of choice. I love the ecosystem with all the frameworks and I love the fact that I can use JavaScript for both frontend and backend development.",
     },
     {
       name: "TypeScript",
@@ -31,12 +19,30 @@ export const Languages = atom({
       name: "React",
       image: "/images/tools/react-logo.svg",
       description:
-        "My first JavaScript framework that I'm using for most of my app creation. I love the flexibility it provides when creating single page apps. I love the ecosystem that helps me out whenever I'm about to hit a roadblock. One of my favourite and most loved JavaScript frameworks. This website has been build with React.",
+        "My first JavaScript framework (UI library) that I'm using for most of my app creation. I love the flexibility it provides when creating single page apps. I love the ecosystem that helps me out whenever I'm about to hit a roadblock. One of my favourite and most loved JavaScript frameworks. This website has been build with React.",
+    },
+    {
+      name: "NextJS",
+      image: "/images/tools/next-js.svg",
+      description:
+        "My favourite framework for building server side rendered React apps. I love the fact that I can use React and NextJS to build full fledged webapps with server side rendering and static site generation. I'm currently working on a project that uses NextJS and I'm loving it.",
     },
     {
       name: "Svelte",
       image: "/images/tools/svelte-logo.svg",
       description: `Probably the most interesting JavaScript "framework" there is. I love the simplicity and speed this compiler brings to the JavaScript ecosystem, as well as its unique approach. Probably the tech I'll spend most of my time with (along with React) while building my personal projects in the future.`,
+    },
+    {
+      name: "HTML",
+      image: "/images/tools/html-logo.png",
+      description:
+        "The first line of code I ever wrote was <div></div> and therefore HTML has a special place in my heart. I love using HTML in combination with JavaScript and CSS to create single page apps.",
+    },
+    {
+      name: "CSS",
+      image: "/images/tools/css-logo.png",
+      description:
+        "Probably one of my favourite things about web development. I could spend days and weeks on CSS and thinkering with positioning and animations. I love using keyframes to create beautiful animations that end users can not miss noticing.",
     },
     {
       name: "Sass",

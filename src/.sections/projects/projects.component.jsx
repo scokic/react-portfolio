@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import ProjectsFilter from "../../.components/projects-filter/projects-filter.component";
 import ProjectsGrid from "../../.components/projects-grid/projects-grid.component";
 
