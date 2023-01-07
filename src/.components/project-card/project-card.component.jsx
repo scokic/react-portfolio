@@ -7,6 +7,7 @@ const ProjectCard = (props) => {
 
   let frameworkImageLinks = [
     { name: "React", url: "/images/tools/react-logo.svg" },
+    { name: "NextJS", url: "/images/tools/next-js.svg" },
     { name: "JavaScript", url: "/images/tools/javascript-logo.svg" },
     { name: "Svelte", url: "/images/tools/svelte-logo.svg" },
     { name: "Vue", url: "/images/tools/vue-logo.svg" },
