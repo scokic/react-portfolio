@@ -14,12 +14,12 @@ const ProjectsGrid = ({ filteredState }) => {
   } else {
     if (projects.filter((project) => project.framework.includes(filteredState)).length == 0) {
       projectList = (
-        <>
+        <div className="flex">
           <p>Sorry, currently there are no projects built with {filteredState} to show you. 😞</p>
           <p style={{ marginTop: "25px" }}>
             Contact me and I'll explain to you what I did with {filteredState} in more details! 😊
           </p>
-        </>
+        </div>
       );
     } else {
       projectList = projects
